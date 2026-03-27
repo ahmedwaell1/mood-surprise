@@ -3,46 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0f1f" />
-  <meta
-    name="description"
-    content="A private mood-repair experience designed for one specific person."
-    id="metaDescription"
-  />
-  <meta property="og:title" content="Classified Mood Repair Protocol" id="metaOgTitle" />
-  <meta
-    property="og:description"
-    content="A polished secret-file surprise with a soft interactive reveal."
-    id="metaOgDescription"
-  />
+  <meta name="theme-color" content="#08111f" />
+  <meta name="description" content="تجربة رقمية هادية ومصممة مخصوص لدنيا." id="metaDescription" />
+  <meta property="og:title" content="إشارة من دنيا القادمة" id="metaOgTitle" />
+  <meta property="og:description" content="ملف خاص جدًا معمول علشان دنيا تاخد نَفَس ومساحة وهدوء." id="metaOgDescription" />
   <meta property="og:type" content="website" />
-  <title>Classified Mood Repair Protocol</title>
+  <title id="pageTitle">إشارة من دنيا القادمة</title>
   <style>
     :root {
       color-scheme: dark;
-      --bg: #07101d;
-      --bg-deep: #040914;
-      --bg-ink: #0b1424;
-      --panel: rgba(11, 21, 38, 0.72);
-      --panel-strong: rgba(17, 29, 49, 0.9);
+      --bg-1: #06101b;
+      --bg-2: #091a2b;
+      --bg-3: #0d2340;
+      --panel: rgba(8, 18, 34, 0.62);
+      --panel-strong: rgba(10, 23, 40, 0.82);
       --line: rgba(255, 255, 255, 0.1);
-      --text: #f8f5ef;
-      --muted: rgba(239, 233, 223, 0.75);
-      --accent: #8ee3d1;
-      --accent-2: #f6c47d;
-      --accent-3: #adc2ff;
-      --danger-soft: rgba(255, 111, 126, 0.22);
-      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-      --radius-xl: 28px;
-      --radius-lg: 22px;
+      --line-soft: rgba(255, 255, 255, 0.06);
+      --text: #f7f4ee;
+      --muted: rgba(231, 226, 218, 0.72);
+      --accent: #82d9d2;
+      --accent-soft: rgba(130, 217, 210, 0.18);
+      --gold: #f3c78c;
+      --gold-soft: rgba(243, 199, 140, 0.18);
+      --rose: #f1aeb7;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
       --radius-md: 18px;
       --radius-sm: 14px;
-      --transition: 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
-      --transition-slow: 560ms cubic-bezier(0.16, 1, 0.3, 1);
-      --font-ui: "SF Pro Display", "SF Arabic", "Noto Sans Arabic", "Segoe UI",
-        "Tahoma", "Geeza Pro", system-ui, sans-serif;
-      --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
-        "Noto Naskh Arabic", "Geeza Pro", serif;
+      --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+      --font-ui: "SF Pro Display", "SF Arabic", "Segoe UI", "Tahoma", "Noto Sans Arabic", sans-serif;
+      --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Geeza Pro", "Noto Naskh Arabic", serif;
     }
 
     * {
@@ -54,15 +46,15 @@
     body {
       margin: 0;
       min-height: 100%;
-      -webkit-text-size-adjust: 100%;
       background:
-        radial-gradient(circle at top, rgba(142, 227, 209, 0.14), transparent 26%),
-        radial-gradient(circle at 80% 10%, rgba(246, 196, 125, 0.12), transparent 22%),
-        linear-gradient(160deg, var(--bg-deep), var(--bg));
+        radial-gradient(circle at top, rgba(130, 217, 210, 0.18), transparent 24%),
+        radial-gradient(circle at 80% 0%, rgba(243, 199, 140, 0.14), transparent 22%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2) 45%, #071523);
       color: var(--text);
       font-family: var(--font-ui);
-      overflow-x: hidden;
       text-rendering: optimizeLegibility;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -75,32 +67,32 @@
     body::after {
       content: "";
       position: fixed;
-      inset: auto;
       border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.7;
       pointer-events: none;
-      filter: blur(70px);
-      opacity: 0.6;
-      animation: drift 16s ease-in-out infinite alternate;
+      z-index: 0;
+      animation: driftGlow 20s ease-in-out infinite alternate;
     }
 
     body::before {
-      width: 42vw;
-      height: 42vw;
-      top: 8%;
-      left: -10%;
-      background: rgba(142, 227, 209, 0.13);
+      width: 44vw;
+      height: 44vw;
+      top: 6%;
+      left: -12%;
+      background: rgba(130, 217, 210, 0.14);
     }
 
     body::after {
-      width: 46vw;
-      height: 46vw;
-      bottom: -10%;
-      right: -12%;
-      background: rgba(246, 196, 125, 0.12);
-      animation-duration: 20s;
+      width: 52vw;
+      height: 52vw;
+      right: -18%;
+      bottom: -12%;
+      background: rgba(243, 199, 140, 0.12);
+      animation-duration: 24s;
     }
 
-    @keyframes drift {
+    @keyframes driftGlow {
       from {
         transform: translate3d(0, 0, 0) scale(1);
       }
@@ -109,124 +101,187 @@
       }
     }
 
-    .ambient-grid {
+    .ambient-grid,
+    .particle-layer,
+    .glow-layer {
       position: fixed;
       inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ambient-grid {
       background-image:
         linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
       background-size: 34px 34px;
-      mask-image: radial-gradient(circle at center, black 35%, transparent 92%);
-      pointer-events: none;
-      opacity: 0.35;
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 28%, transparent 92%);
+      opacity: 0.34;
     }
 
-    .particle-layer,
-    .sparkle-layer,
-    .toast {
-      pointer-events: none;
+    .glow-layer::before,
+    .glow-layer::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.18;
     }
 
-    .particle-layer,
-    .sparkle-layer {
-      position: fixed;
-      inset: 0;
-      overflow: hidden;
+    .glow-layer::before {
+      width: 34vh;
+      height: 34vh;
+      left: 8%;
+      top: 36%;
+      background: rgba(130, 217, 210, 0.34);
+    }
+
+    .glow-layer::after {
+      width: 28vh;
+      height: 28vh;
+      right: 10%;
+      top: 22%;
+      background: rgba(243, 199, 140, 0.3);
     }
 
     .particle {
       position: absolute;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.85), transparent 70%);
-      opacity: 0;
-      animation: floatParticle linear infinite;
-    }
-
-    @keyframes floatParticle {
-      0% {
-        transform: translate3d(0, 14px, 0) scale(0.7);
-        opacity: 0;
-      }
-      15% {
-        opacity: 0.45;
-      }
-      85% {
-        opacity: 0.15;
-      }
-      100% {
-        transform: translate3d(0, -110vh, 0) scale(1.12);
-        opacity: 0;
-      }
-    }
-
-    .sparkle {
-      position: absolute;
-      width: 10px;
-      height: 10px;
       border-radius: 50%;
-      background:
-        radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0 18%, transparent 20%),
-        linear-gradient(0deg, transparent 0 42%, rgba(255, 255, 255, 0.75) 43% 57%, transparent 58%),
-        linear-gradient(90deg, transparent 0 42%, rgba(255, 255, 255, 0.75) 43% 57%, transparent 58%);
-      transform: scale(0);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.9), transparent 72%);
       opacity: 0;
-      animation: sparkleBurst 1300ms ease-out forwards;
+      animation: riseParticle linear infinite;
     }
 
-    @keyframes sparkleBurst {
+    @keyframes riseParticle {
       0% {
+        transform: translateY(24px) scale(0.6);
         opacity: 0;
-        transform: translate3d(0, 0, 0) scale(0.2) rotate(0deg);
       }
-      25% {
-        opacity: 1;
+      10% {
+        opacity: 0.34;
+      }
+      80% {
+        opacity: 0.12;
       }
       100% {
+        transform: translateY(-110vh) scale(1.1);
         opacity: 0;
-        transform: translate3d(var(--dx), var(--dy), 0) scale(1.55) rotate(220deg);
       }
     }
 
-    .page-shell {
+    .app-shell {
       position: relative;
       z-index: 1;
-      width: min(100%, 560px);
+      width: min(100%, 620px);
       margin: 0 auto;
-      padding: max(18px, env(safe-area-inset-top)) 18px max(22px, env(safe-area-inset-bottom));
+      padding:
+        max(18px, env(safe-area-inset-top))
+        18px
+        max(24px, env(safe-area-inset-bottom));
       min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .hud {
+      position: sticky;
+      top: max(10px, env(safe-area-inset-top));
+      z-index: 5;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border-radius: 24px;
+      background: rgba(7, 16, 30, 0.62);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .hud-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.42), transparent 36%),
+        linear-gradient(135deg, rgba(243, 199, 140, 0.28), rgba(130, 217, 210, 0.2));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .hud-copy {
+      min-width: 0;
+    }
+
+    .hud-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-bottom: 2px;
+      color: #fff7ea;
+    }
+
+    .hud-subtitle {
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+
+    .hud-progress {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-top: 2px;
+      scrollbar-width: none;
+    }
+
+    .hud-progress::-webkit-scrollbar {
+      display: none;
+    }
+
+    .progress-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      flex-shrink: 0;
+      transition: transform 320ms var(--ease), background 320ms var(--ease), box-shadow 320ms var(--ease);
+    }
+
+    .progress-dot.is-active {
+      background: linear-gradient(135deg, var(--gold), #fff2d8);
+      box-shadow: 0 0 18px rgba(243, 199, 140, 0.34);
+      transform: scale(1.14);
+    }
+
+    .progress-dot.is-done {
+      background: rgba(130, 217, 210, 0.38);
+      box-shadow: 0 0 14px rgba(130, 217, 210, 0.22);
+    }
+
+    .view-frame {
+      position: relative;
+      flex: 1;
+      display: flex;
+    }
+
+    .view {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      animation: viewIn 720ms var(--ease-soft);
     }
 
-    .app {
-      width: 100%;
-      position: relative;
-    }
-
-    .screen {
-      display: none;
-      opacity: 0;
-      transform: translateY(16px) scale(0.98);
-      transition: opacity 420ms ease, transform 420ms ease;
-      will-change: opacity, transform;
-    }
-
-    .screen.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    .screen.active .panel {
-      animation: panelEnter 780ms cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes panelEnter {
+    @keyframes viewIn {
       from {
         opacity: 0;
-        transform: translateY(24px) scale(0.97);
-        filter: blur(8px);
+        transform: translateY(26px) scale(0.98);
+        filter: blur(10px);
       }
       to {
         opacity: 1;
@@ -235,97 +290,82 @@
       }
     }
 
-    .panel {
+    .screen-card {
       position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 28%),
-        var(--panel);
-      border: 1px solid var(--line);
+      width: 100%;
+      min-height: min(78svh, 900px);
+      padding: 24px;
       border-radius: var(--radius-xl);
-      padding: 22px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 26%),
+        var(--panel);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      overflow: hidden;
       isolation: isolate;
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
     }
 
-    .panel::before {
+    .screen-card::before,
+    .screen-card::after {
       content: "";
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 32%);
       pointer-events: none;
     }
 
-    .panel::after {
-      content: "";
-      position: absolute;
-      inset: -120% auto auto -30%;
+    .screen-card::before {
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 36%);
+    }
+
+    .screen-card::after {
       width: 45%;
       height: 240%;
-      background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.11), transparent);
-      transform: rotate(22deg);
-      opacity: 0.45;
-      pointer-events: none;
-      animation: panelSweep 10s linear infinite;
+      top: -82%;
+      left: -24%;
+      background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+      transform: rotate(24deg);
+      opacity: 0.38;
+      animation: sheen 12s linear infinite;
     }
 
-    @keyframes panelSweep {
+    @keyframes sheen {
       0%,
-      18% {
-        transform: translate3d(-120%, 0, 0) rotate(22deg);
+      14% {
+        transform: translateX(-160%) rotate(24deg);
         opacity: 0;
       }
-      28% {
-        opacity: 0.42;
+      22% {
+        opacity: 0.4;
       }
-      42%,
+      36%,
       100% {
-        transform: translate3d(340%, 0, 0) rotate(22deg);
+        transform: translateX(320%) rotate(24deg);
         opacity: 0;
       }
     }
 
-    .label-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--muted);
-      font-size: 0.84rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 16px;
-    }
-
-    .classified-line {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 16px;
-      color: rgba(246, 196, 125, 0.88);
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 18px;
     }
 
-    .classified-line::before,
-    .classified-line::after {
-      content: "";
-      width: 26px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(246, 196, 125, 0.65));
-    }
-
-    .label-chip::before {
+    .eyebrow::before {
       content: "";
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 12px rgba(142, 227, 209, 0.55);
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      box-shadow: 0 0 12px rgba(243, 199, 140, 0.3);
     }
 
     h1,
@@ -335,124 +375,70 @@
       margin: 0;
     }
 
-    .hero-title,
+    .display-title,
     .section-title,
-    .result-title {
-      line-height: 1.18;
-      font-weight: 700;
+    .final-title {
       font-family: var(--font-display);
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 8vw, 3.6rem);
-      margin-bottom: 16px;
-      text-wrap: balance;
+      line-height: 1.15;
       letter-spacing: 0.01em;
     }
 
-    .hero-title .accent,
-    .result-title .accent {
-      color: var(--accent-2);
-      text-shadow: 0 0 22px rgba(246, 196, 125, 0.18);
+    .display-title {
+      font-size: clamp(2.5rem, 10vw, 4.3rem);
+      margin-bottom: 16px;
+      text-wrap: balance;
     }
 
-    .hero-subtitle,
-    .section-copy,
-    .result-copy,
-    .note {
+    .section-title,
+    .final-title {
+      font-size: clamp(1.9rem, 6vw, 2.7rem);
+      margin-bottom: 12px;
+      text-wrap: balance;
+    }
+
+    .accent {
+      color: #fff0d3;
+      text-shadow: 0 0 24px rgba(243, 199, 140, 0.24);
+    }
+
+    .copy,
+    .soft-copy,
+    .module-copy,
+    .message-text {
       color: var(--muted);
-      line-height: 1.85;
-      font-size: 1.01rem;
-    }
-
-    .hero-panel {
-      min-height: min(78svh, 720px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .screen.active .hero-panel > * {
-      animation: heroRise 860ms var(--transition-slow) both;
-    }
-
-    .screen.active .hero-panel > :last-child {
-      animation-delay: 110ms;
-    }
-
-    .screen.active .hero-badge {
-      animation: heroRise 860ms var(--transition-slow) both;
-    }
-
-    .screen.active .hero-badge:nth-child(1) {
-      animation-delay: 120ms;
-    }
-
-    .screen.active .hero-badge:nth-child(2) {
-      animation-delay: 180ms;
-    }
-
-    .screen.active .hero-badge:nth-child(3) {
-      animation-delay: 240ms;
-    }
-
-    .screen.active .hero-badge:nth-child(4) {
-      animation-delay: 300ms;
-    }
-
-    @keyframes heroRise {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-badge-grid {
-      display: grid;
-      gap: 10px;
-      margin-top: 24px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero-badge {
-      padding: 14px 16px;
-      border-radius: var(--radius-md);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 60%),
-        rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      color: var(--muted);
-      font-size: 0.92rem;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-    }
-
-    .hero-badge strong {
-      display: block;
-      color: var(--text);
+      line-height: 1.9;
       font-size: 1rem;
-      margin-bottom: 4px;
+    }
+
+    .soft-copy {
+      font-size: 0.94rem;
+    }
+
+    .stack {
+      display: grid;
+      gap: 16px;
     }
 
     .button-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
 
     button {
       appearance: none;
       border: 0;
-      outline: 0;
       cursor: pointer;
       font: inherit;
+      color: inherit;
       touch-action: manipulation;
-      transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition), background var(--transition), border-color var(--transition);
+      transition:
+        transform 300ms var(--ease),
+        box-shadow 300ms var(--ease),
+        background 300ms var(--ease),
+        border-color 300ms var(--ease),
+        opacity 300ms var(--ease);
     }
 
     button:active {
@@ -460,626 +446,1193 @@
     }
 
     button:focus-visible {
-      box-shadow: 0 0 0 2px rgba(7, 16, 29, 0.88), 0 0 0 4px rgba(246, 196, 125, 0.46);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(7, 16, 29, 0.9), 0 0 0 4px rgba(243, 199, 140, 0.38);
     }
 
-    .primary-btn,
-    .secondary-btn,
-    .ghost-btn {
-      min-height: 54px;
+    .btn,
+    .btn-soft,
+    .btn-ghost {
+      min-height: 56px;
+      padding: 0 20px;
       border-radius: 18px;
-      padding: 0 18px;
       font-weight: 700;
-    }
-
-    .primary-btn {
-      min-width: 150px;
-      color: #08121d;
-      background: linear-gradient(135deg, var(--accent-2), #f6d9a0 55%, #fff4da);
-      box-shadow: 0 14px 34px rgba(246, 196, 125, 0.24);
       position: relative;
       overflow: hidden;
     }
 
-    .primary-btn::before {
+    .btn {
+      color: #09111d;
+      background: linear-gradient(135deg, var(--gold), #f9dfb5 58%, #fff4df);
+      box-shadow: 0 18px 40px rgba(243, 199, 140, 0.26);
+    }
+
+    .btn::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(120deg, transparent 18%, rgba(255, 255, 255, 0.55) 48%, transparent 74%);
+      background: linear-gradient(120deg, transparent 18%, rgba(255, 255, 255, 0.48) 46%, transparent 72%);
       transform: translateX(-140%);
       transition: transform 900ms ease;
     }
 
-    .primary-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(246, 196, 125, 0.28);
-    }
-
-    .primary-btn:hover::before {
+    .btn:hover::before {
       transform: translateX(140%);
     }
 
-    .primary-btn:disabled {
+    .btn-soft {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px dashed rgba(255, 255, 255, 0.14);
+    }
+
+    .btn:disabled,
+    .btn-soft:disabled,
+    .btn-ghost:disabled {
       opacity: 0.45;
       cursor: not-allowed;
       box-shadow: none;
     }
 
-    .secondary-btn {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .ghost-btn {
-      color: var(--muted);
-      background: transparent;
-      border: 1px dashed rgba(255, 255, 255, 0.12);
-    }
-
-    .section-head {
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: clamp(1.7rem, 5.6vw, 2.2rem);
-      margin-bottom: 10px;
-      letter-spacing: 0.01em;
-    }
-
-    .question-group + .question-group {
-      margin-top: 18px;
-    }
-
-    .question-card {
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 44%),
-        rgba(255, 255, 255, 0.03);
-      padding: 16px;
-    }
-
-    .question-label {
+    .pill-row {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .question-label h3 {
-      font-size: 1.05rem;
-      line-height: 1.5;
-    }
-
-    .counter-chip {
-      flex-shrink: 0;
-      min-width: 44px;
-      height: 34px;
-      padding: 0 10px;
+    .pill {
+      padding: 10px 14px;
       border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(142, 227, 209, 0.08);
-      color: var(--accent);
-      border: 1px solid rgba(142, 227, 209, 0.16);
-      font-weight: 700;
-      font-size: 0.92rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
-    .options-grid {
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+      margin: 8px 0;
+    }
+
+    .hero-layout,
+    .section-layout {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: min(70svh, 800px);
+      gap: 24px;
+    }
+
+    .hero-orb {
+      position: absolute;
+      inset: auto auto 10% -6%;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.22), transparent 32%),
+        linear-gradient(140deg, rgba(130, 217, 210, 0.28), rgba(243, 199, 140, 0.18));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      filter: blur(0.2px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 60px rgba(0, 0, 0, 0.24);
+      animation: floatOrb 8s ease-in-out infinite;
+    }
+
+    .hero-orb::after {
+      content: "";
+      position: absolute;
+      inset: 16%;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      opacity: 0.5;
+      animation: pulseRing 3.2s ease-out infinite;
+    }
+
+    @keyframes floatOrb {
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-12px) scale(1.03);
+      }
+    }
+
+    @keyframes pulseRing {
+      0% {
+        transform: scale(0.88);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1.15);
+        opacity: 0;
+      }
+    }
+
+    .hero-meta {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
     }
 
-    .option-btn {
+    .hero-meta .meta-card,
+    .glass-card,
+    .module-card,
+    .room-card,
+    .diagnostic-card,
+    .reveal-card {
       position: relative;
-      text-align: right;
-      min-height: 104px;
-      padding: 16px 16px 16px 42px;
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
+      padding: 16px;
       background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 38%),
-        rgba(255, 255, 255, 0.035);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--text);
-      overflow: hidden;
-      transform: translateY(0) scale(1);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-      transition:
-        transform var(--transition-slow),
-        box-shadow var(--transition-slow),
-        background var(--transition),
-        border-color var(--transition),
-        filter var(--transition);
-      will-change: transform;
-    }
-
-    .option-btn::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(140deg, rgba(255, 255, 255, 0.1), transparent 35%, transparent 70%, rgba(255, 255, 255, 0.08));
-      opacity: 0;
-      transition: opacity var(--transition);
-    }
-
-    .option-btn::after {
-      content: "";
-      position: absolute;
-      inset: auto -30% -45% auto;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 70%);
-      transition: opacity var(--transition), transform var(--transition);
-      opacity: 0;
-      transform: scale(0.7);
-    }
-
-    .option-btn:hover::after,
-    .option-btn.selected::after {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .option-btn:hover,
-    .option-btn:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 28px rgba(2, 6, 14, 0.22);
-    }
-
-    .option-btn:hover::before,
-    .option-btn.selected::before {
-      opacity: 1;
-    }
-
-    .option-btn.selected {
-      border-color: rgba(246, 196, 125, 0.45);
-      background:
-        linear-gradient(135deg, rgba(246, 196, 125, 0.18), rgba(142, 227, 209, 0.12)),
-        rgba(255, 255, 255, 0.055);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 18px 34px rgba(0, 0, 0, 0.22);
-      transform: translateY(-4px) scale(1.01);
-    }
-
-    .option-btn .emoji {
-      font-size: 1.25rem;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-
-    .option-btn .title {
-      display: block;
-      font-weight: 700;
-      font-size: 0.97rem;
-      margin-bottom: 4px;
-    }
-
-    .option-btn .desc {
-      display: block;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: var(--muted);
-    }
-
-    .option-check {
-      position: absolute;
-      left: 14px;
-      top: 14px;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.04);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 50%),
+        rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      overflow: hidden;
     }
 
-    .option-check::after {
-      content: "";
-      position: absolute;
-      inset: 4px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-2), #fff0cf);
-      opacity: 0;
-      transform: scale(0.4);
-      transition: transform var(--transition), opacity var(--transition);
-    }
-
-    .option-btn.selected .option-check::after {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .helper-card {
-      margin-top: 16px;
-      padding: 15px 16px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(142, 227, 209, 0.09), rgba(173, 194, 255, 0.08));
-      border: 1px solid rgba(142, 227, 209, 0.12);
-      color: var(--muted);
-      font-size: 0.93rem;
-      line-height: 1.7;
-    }
-
-    .processing-panel,
-    .result-panel {
-      min-height: min(78svh, 720px);
-    }
-
-    .processing-panel {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 18px;
-    }
-
-    .processing-visual {
-      display: grid;
-      place-items: center;
-      margin: 4px 0 8px;
-    }
-
-    .scanner-core {
-      --progress-angle: 0deg;
-      position: relative;
-      width: min(60vw, 220px);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background:
-        radial-gradient(circle at center, rgba(7, 16, 29, 0.96) 0 53%, transparent 54%),
-        conic-gradient(
-          from -90deg,
-          rgba(246, 196, 125, 0.95) 0deg,
-          rgba(142, 227, 209, 0.9) var(--progress-angle),
-          rgba(255, 255, 255, 0.09) var(--progress-angle),
-          rgba(255, 255, 255, 0.09) 360deg
-        );
-      box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.06),
-        0 26px 60px rgba(2, 7, 18, 0.42),
-        0 0 28px rgba(142, 227, 209, 0.12);
-    }
-
-    .scanner-core::before {
-      content: "";
-      position: absolute;
-      inset: 12%;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.09), rgba(8, 17, 31, 0.88) 68%);
-      box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.26);
-    }
-
-    .scanner-core::after {
-      content: "";
-      position: absolute;
-      inset: -8%;
-      border-radius: 50%;
-      border: 1px solid rgba(246, 196, 125, 0.18);
-      opacity: 0.5;
-      animation: scannerRotate 6s linear infinite;
-    }
-
-    @keyframes scannerRotate {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .scanner-center {
-      position: relative;
-      z-index: 1;
-      width: 72%;
-      text-align: center;
-    }
-
-    .scanner-value {
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 9vw, 3.7rem);
-      line-height: 1;
-      color: #fff7e3;
-      text-shadow: 0 0 24px rgba(246, 196, 125, 0.18);
-    }
-
-    .scanner-caption {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.6;
-    }
-
-    .processing-stage-rail {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .stage-pill {
-      min-height: 52px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 10px 8px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(239, 233, 223, 0.62);
-      font-size: 0.8rem;
-      line-height: 1.45;
-      transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
-    }
-
-    .stage-pill.active {
+    .meta-card strong,
+    .glass-card strong {
+      display: block;
+      margin-bottom: 6px;
       color: var(--text);
-      background: linear-gradient(135deg, rgba(246, 196, 125, 0.16), rgba(142, 227, 209, 0.12));
-      border-color: rgba(246, 196, 125, 0.28);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
-      transform: translateY(-2px);
+      font-size: 0.98rem;
     }
 
-    .progress-shell {
-      margin: 12px 0 2px;
-      padding: 6px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .identity-grid,
+    .dossier-grid,
+    .lab-grid,
+    .room-grid {
+      display: grid;
+      gap: 14px;
     }
 
-    .progress-bar {
-      width: 0;
-      height: 12px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2), #ffe9c1);
-      box-shadow: 0 0 26px rgba(142, 227, 209, 0.35);
-      transition: width 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    .confirm-row {
+      display: grid;
+      gap: 10px;
     }
 
-    .progress-meta {
+    .confirm-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      color: var(--muted);
-      font-size: 0.95rem;
     }
 
-    .processing-log {
+    .confirm-label {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .confirm-options {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
-      margin-top: 6px;
     }
 
-    .log-line {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      color: var(--muted);
-      transform: translateY(10px);
-      opacity: 0;
-      animation: logAppear 360ms ease forwards;
-    }
-
-    .log-line::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      margin-top: 7px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 12px rgba(246, 196, 125, 0.35);
-    }
-
-    @keyframes logAppear {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .pulse-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 0 rgba(142, 227, 209, 0.3);
-      animation: pulse 1.8s infinite;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(142, 227, 209, 0.35);
-      }
-      70% {
-        box-shadow: 0 0 0 14px rgba(142, 227, 209, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(142, 227, 209, 0);
-      }
-    }
-
-    .result-panel {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      justify-content: center;
-    }
-
-    .result-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: calc(var(--radius-xl) - 4px);
-      padding: 22px;
+    .signal-strip {
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+      border-radius: 22px;
       background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.09), transparent 26%),
-        linear-gradient(160deg, rgba(246, 196, 125, 0.14), rgba(142, 227, 209, 0.11), rgba(173, 194, 255, 0.09));
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.07),
-        0 28px 70px rgba(0, 0, 0, 0.26);
+        radial-gradient(circle at top, rgba(130, 217, 210, 0.12), transparent 32%),
+        rgba(7, 16, 28, 0.46);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .result-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -10% -48% auto;
-      width: 190px;
-      height: 190px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 65%);
-    }
-
-    .result-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.14) 45%, transparent 70%);
-      transform: translateX(-130%);
-      animation: resultSheen 1800ms ease 240ms forwards;
-      pointer-events: none;
-    }
-
-    @keyframes resultSheen {
-      to {
-        transform: translateX(130%);
-      }
-    }
-
-    .result-eyebrow {
-      display: inline-flex;
+    .signal-head {
+      display: flex;
       align-items: center;
-      padding: 8px 12px;
-      margin-bottom: 14px;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .signal-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: #fff7ea;
+    }
+
+    .signal-track {
+      display: flex;
+      gap: 10px;
+    }
+
+    .signal-dot {
+      width: 14px;
+      height: 14px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 247, 227, 0.84);
+      transition: transform 260ms var(--ease), background 260ms var(--ease), box-shadow 260ms var(--ease);
+    }
+
+    .signal-dot.is-live {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, rgba(243, 199, 140, 0.98), rgba(255, 244, 223, 0.98));
+      box-shadow: 0 0 18px rgba(243, 199, 140, 0.34);
+    }
+
+    .signal-status {
+      color: rgba(247, 244, 238, 0.84);
+      line-height: 1.9;
+      font-size: 0.94rem;
+    }
+
+    .choice-chip,
+    .token,
+    .atmosphere-card,
+    .room-selector {
+      min-height: 72px;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.07), transparent 42%),
+        rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: right;
+      color: var(--text);
+      transition:
+        transform 320ms var(--ease-soft),
+        box-shadow 320ms var(--ease-soft),
+        background 320ms var(--ease),
+        border-color 320ms var(--ease);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .choice-chip:hover,
+    .token:hover,
+    .atmosphere-card:hover,
+    .room-selector:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18);
+    }
+
+    .choice-chip.is-selected,
+    .token.is-selected,
+    .atmosphere-card.is-selected,
+    .room-selector.is-selected {
+      background:
+        linear-gradient(135deg, rgba(243, 199, 140, 0.18), rgba(130, 217, 210, 0.15)),
+        rgba(255, 255, 255, 0.06);
+      border-color: rgba(243, 199, 140, 0.34);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 36px rgba(0, 0, 0, 0.22);
+    }
+
+    .choice-chip .tiny,
+    .token .tiny,
+    .atmosphere-card .tiny,
+    .room-selector .tiny {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .dossier-row {
+      display: grid;
+      gap: 10px;
+    }
+
+    .metric-line {
+      display: grid;
+      gap: 8px;
+    }
+
+    .metric-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--text);
+      font-size: 0.92rem;
+    }
+
+    .metric-track {
+      position: relative;
+      width: 100%;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .metric-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--fill, 50%);
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(130, 217, 210, 0.9), rgba(243, 199, 140, 0.92));
+      box-shadow: 0 0 24px rgba(243, 199, 140, 0.18);
+      animation: fillGrow 900ms var(--ease-soft);
+    }
+
+    @keyframes fillGrow {
+      from {
+        width: 0;
+      }
+      to {
+        width: var(--fill, 50%);
+      }
+    }
+
+    .message-stage {
+      display: grid;
+      gap: 16px;
+    }
+
+    .message-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 55%),
+        rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      min-height: 220px;
+    }
+
+    .message-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top, rgba(243, 199, 140, 0.12), transparent 28%),
+        linear-gradient(120deg, transparent 0 40%, rgba(255, 255, 255, 0.05) 48%, transparent 56%);
+      pointer-events: none;
+    }
+
+    .message-index {
+      position: relative;
+      z-index: 1;
+      color: var(--gold);
       font-size: 0.82rem;
-      letter-spacing: 0.03em;
     }
 
-    .result-title {
-      font-size: clamp(2rem, 6.2vw, 2.8rem);
-      margin-bottom: 12px;
-    }
-
-    .result-copy {
+    .message-text {
+      position: relative;
+      z-index: 1;
       font-size: 1.05rem;
+      line-height: 2;
+      color: rgba(247, 244, 238, 0.86);
     }
 
-    .result-copy-lead {
-      color: #fffaf2;
-      font-size: 1.14rem;
-      line-height: 1.95;
-      margin-bottom: 10px;
+    .message-echo {
+      position: relative;
+      z-index: 1;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(247, 244, 238, 0.72);
+      line-height: 1.8;
+      font-size: 0.92rem;
     }
 
-    .result-copy strong {
-      color: #fff7e3;
-      font-weight: 700;
+    .message-trail {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
-    .result-highlight {
-      margin-top: 16px;
+    .message-trail span {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .message-trail span.is-active {
+      background: linear-gradient(135deg, rgba(130, 217, 210, 0.94), rgba(243, 199, 140, 0.94));
+      box-shadow: 0 0 16px rgba(130, 217, 210, 0.24);
+    }
+
+    .module-card {
+      display: grid;
+      gap: 12px;
+    }
+
+    .module-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .module-title {
+      font-family: var(--font-display);
+      font-size: 1.26rem;
+      color: #fff7ea;
+    }
+
+    .token-grid,
+    .atmosphere-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stabilize-chamber {
+      display: grid;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at top, rgba(130, 217, 210, 0.12), transparent 30%),
+        rgba(6, 14, 25, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .pulse-button {
+      position: relative;
+      min-height: 170px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at center, rgba(243, 199, 140, 0.08), transparent 32%),
+        rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .pulse-button::before,
+    .pulse-button::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      inset: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .pulse-button::before {
+      width: 118px;
+      height: 118px;
+      background:
+        radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.2), transparent 36%),
+        linear-gradient(135deg, rgba(243, 199, 140, 0.2), rgba(130, 217, 210, 0.18));
+      box-shadow: 0 0 42px rgba(243, 199, 140, 0.16);
+    }
+
+    .pulse-button::after {
+      width: 138px;
+      height: 138px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      opacity: 0.4;
+    }
+
+    .pulse-button.is-live::after {
+      animation: pulseRing 1.4s ease-out infinite;
+    }
+
+    .pulse-button.is-done::before {
+      box-shadow: 0 0 48px rgba(130, 217, 210, 0.24);
+      background:
+        radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.26), transparent 36%),
+        linear-gradient(135deg, rgba(130, 217, 210, 0.3), rgba(243, 199, 140, 0.18));
+    }
+
+    .pulse-core {
+      position: relative;
+      z-index: 1;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0 16%, transparent 18%),
+        linear-gradient(140deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .pulse-button.is-live .pulse-core {
+      animation: orbBeat 1s ease-in-out infinite;
+    }
+
+    @keyframes orbBeat {
+      0%,
+      100% {
+        transform: scale(0.96);
+      }
+      50% {
+        transform: scale(1.06);
+      }
+    }
+
+    .pulse-caption {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      display: block;
+      max-width: 240px;
+      text-align: center;
+      color: #fff4df;
+      line-height: 1.9;
+      font-size: 0.96rem;
+    }
+
+    .breath-meter {
+      width: 100%;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .breath-meter span {
+      display: block;
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(130, 217, 210, 0.92), rgba(243, 199, 140, 0.92));
+      box-shadow: 0 0 22px rgba(243, 199, 140, 0.18);
+      transition: width 140ms linear;
+    }
+
+    .stability-status {
+      color: rgba(247, 244, 238, 0.78);
+      font-size: 0.92rem;
+      line-height: 1.9;
+    }
+
+    .sea-stage {
+      position: relative;
+      min-height: 380px;
+      border-radius: 28px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(245, 220, 169, 0.22), transparent 18%),
+        linear-gradient(180deg, rgba(15, 28, 52, 0.96), rgba(6, 18, 34, 0.96) 48%, rgba(4, 10, 20, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 30px 80px rgba(0, 0, 0, 0.26);
+    }
+
+    .sea-stage::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 28% 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 240, 211, 0.45), transparent);
+      opacity: 0.8;
+    }
+
+    .moon {
+      position: absolute;
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      top: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      background:
+        radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.92), rgba(243, 199, 140, 0.88) 52%, rgba(243, 199, 140, 0.06) 72%);
+      box-shadow: 0 0 40px rgba(243, 199, 140, 0.28);
+    }
+
+    .moon-touch {
+      position: absolute;
+      top: 9%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 102px;
+      height: 102px;
+      border-radius: 50%;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    .moon::after {
+      content: "";
+      position: absolute;
+      inset: 42px calc(50% - 2px) auto;
+      width: 4px;
+      height: 150px;
+      background: linear-gradient(180deg, rgba(255, 241, 210, 0.52), transparent);
+      filter: blur(3px);
+    }
+
+    .wave {
+      position: absolute;
+      inset-inline: -8%;
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(130, 217, 210, 0.18), rgba(130, 217, 210, 0.04));
+      border: 1px solid rgba(130, 217, 210, 0.18);
+      animation: waveDrift linear infinite;
+    }
+
+    .wave.wave-1 {
+      height: 170px;
+      bottom: 6%;
+      animation-duration: 14s;
+    }
+
+    .wave.wave-2 {
+      height: 138px;
+      bottom: -2%;
+      opacity: 0.8;
+      animation-duration: 19s;
+      animation-direction: reverse;
+    }
+
+    .wave.wave-3 {
+      height: 118px;
+      bottom: -9%;
+      opacity: 0.65;
+      animation-duration: 24s;
+    }
+
+    @keyframes waveDrift {
+      from {
+        transform: translateX(-3%);
+      }
+      to {
+        transform: translateX(3%);
+      }
+    }
+
+    .sea-overlay {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      padding: 18px;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .sea-node,
+    .sea-shell,
+    .reflection-touch {
+      pointer-events: auto;
+      border: 0;
+      background: transparent;
+      padding: 0;
+    }
+
+    .sea-node {
+      justify-self: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0 24%, transparent 26%),
+        linear-gradient(0deg, transparent 0 43%, rgba(255, 255, 255, 0.72) 44% 56%, transparent 57%),
+        linear-gradient(90deg, transparent 0 43%, rgba(255, 255, 255, 0.72) 44% 56%, transparent 57%);
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.24));
+      animation: twinkle 2.4s ease-in-out infinite;
+    }
+
+    .sea-node:nth-child(2) {
+      margin-top: 26px;
+      animation-delay: 300ms;
+    }
+
+    .sea-node:nth-child(3) {
+      margin-top: 70px;
+      animation-delay: 640ms;
+    }
+
+    @keyframes twinkle {
+      0%,
+      100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.08);
+        opacity: 1;
+      }
+    }
+
+    .sea-floor {
+      position: absolute;
+      inset: auto 18px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .sea-shell {
+      min-width: 84px;
+      min-height: 54px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      font-size: 0.86rem;
+    }
+
+    .reflection-touch {
+      min-height: 54px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(243, 199, 140, 0.18), rgba(130, 217, 210, 0.14)),
+        rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(243, 199, 140, 0.22);
+      color: #fff4df;
+    }
+
+    .horizon-touch {
+      position: absolute;
+      inset: auto 12% 24% 12%;
+      height: 36px;
+      border: 0;
+      background: transparent;
+    }
+
+    .sea-whisper {
+      position: absolute;
+      inset: auto 18px 92px 18px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(6, 14, 25, 0.26);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(247, 244, 238, 0.82);
+      line-height: 1.8;
+      font-size: 0.9rem;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .fragment-card,
+    .room-stage,
+    .humor-display,
+    .decode-card,
+    .secret-card,
+    .ending-card {
+      border-radius: 24px;
+      padding: 18px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.07), transparent 54%),
+        rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .room-stage {
+      position: relative;
+      min-height: 240px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(255, 240, 211, 0.14), transparent 18%),
+        linear-gradient(180deg, rgba(14, 25, 46, 0.98), rgba(7, 16, 28, 0.96));
+    }
+
+    .room-stage::before,
+    .room-stage::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .room-stage::before {
+      inset: auto 10% 12% 10%;
+      height: 42%;
+      border-radius: 24px 24px 0 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .room-stage::after {
+      width: 46%;
+      height: 46%;
+      top: 16%;
+      right: 12%;
+      border-radius: 20px;
+      background: radial-gradient(circle, rgba(243, 199, 140, 0.18), transparent 68%);
+      filter: blur(8px);
+    }
+
+    .room-stage.room-sea-balcony {
+      background:
+        radial-gradient(circle at 50% 18%, rgba(255, 240, 211, 0.18), transparent 18%),
+        linear-gradient(180deg, rgba(8, 24, 44, 0.98), rgba(5, 15, 28, 0.96));
+    }
+
+    .room-stage.room-rain-window {
+      background:
+        radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.08), transparent 18%),
+        linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(9, 14, 24, 0.96));
+    }
+
+    .room-stage.room-rain-window::after {
+      background:
+        repeating-linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0.08) 0 2px,
+          transparent 3px 16px
+        );
+      filter: blur(0);
+      opacity: 0.24;
+    }
+
+    .room-stage.room-soft-desk {
+      background:
+        radial-gradient(circle at 70% 24%, rgba(243, 199, 140, 0.18), transparent 18%),
+        linear-gradient(180deg, rgba(23, 25, 40, 0.98), rgba(10, 13, 24, 0.96));
+    }
+
+    .room-stage.room-city-corner {
+      background:
+        radial-gradient(circle at 55% 16%, rgba(255, 240, 211, 0.12), transparent 18%),
+        linear-gradient(180deg, rgba(10, 15, 28, 0.98), rgba(4, 9, 18, 0.96));
+    }
+
+    .room-whisper {
+      margin-top: 8px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #fff5e5;
+      line-height: 1.85;
+      font-size: 0.92rem;
+    }
+
+    .room-detail-button {
+      align-self: start;
+      margin-top: 6px;
+      min-height: 48px;
+      padding: 0 16px;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(243, 199, 140, 0.16), rgba(130, 217, 210, 0.12)),
+        rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(243, 199, 140, 0.22);
+      color: #fff5e5;
+      transition: transform 280ms var(--ease-soft), box-shadow 280ms var(--ease-soft);
+    }
+
+    .room-detail-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 26px rgba(0, 0, 0, 0.18);
+    }
+
+    .room-copy {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 10px;
+      padding-top: 24px;
+    }
+
+    .diagnostic-card {
+      display: grid;
+      gap: 14px;
+    }
+
+    .humor-display {
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      line-height: 1.8;
+      color: #fff4df;
+      background:
+        radial-gradient(circle at top, rgba(243, 199, 140, 0.1), transparent 26%),
+        rgba(255, 255, 255, 0.05);
+    }
+
+    .decode-card {
+      display: grid;
+      gap: 16px;
+    }
+
+    .decode-orb {
+      --progress: 0deg;
+      width: min(60vw, 210px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at center, rgba(7, 16, 30, 0.96) 0 52%, transparent 53%),
+        conic-gradient(
+          from -90deg,
+          rgba(243, 199, 140, 0.92),
+          rgba(130, 217, 210, 0.92) var(--progress),
+          rgba(255, 255, 255, 0.08) var(--progress),
+          rgba(255, 255, 255, 0.08)
+        );
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 28px 70px rgba(0, 0, 0, 0.24);
+    }
+
+    .decode-center {
+      width: 72%;
+      text-align: center;
+    }
+
+    .decode-percent {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 9vw, 3.8rem);
+      line-height: 1;
+      color: #fff4df;
+    }
+
+    .decode-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .decode-log {
+      display: grid;
+      gap: 10px;
+    }
+
+    .decode-line {
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+      transform: translateY(10px);
+      opacity: 0;
+      animation: lineIn 360ms var(--ease) forwards;
+    }
+
+    @keyframes lineIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .final-title {
+      font-size: clamp(2.2rem, 7vw, 3rem);
+    }
+
+    .final-message {
+      display: grid;
+      gap: 14px;
+      font-size: 1.08rem;
+      line-height: 2;
+      color: rgba(247, 244, 238, 0.88);
+    }
+
+    .final-message span {
+      display: block;
+    }
+
+    .final-aside {
+      margin-top: 18px;
       padding: 16px 18px;
       border-radius: 20px;
-      background: rgba(6, 14, 25, 0.26);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      color: rgba(248, 245, 239, 0.92);
-      line-height: 1.8;
+      background:
+        radial-gradient(circle at top, rgba(130, 217, 210, 0.1), transparent 34%),
+        rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .signature-line {
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--text);
-      font-size: 1.03rem;
-      line-height: 1.8;
+    .final-aside strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff7ea;
+      font-size: 0.95rem;
     }
 
-    .result-tags {
+    .view.scene-sea .screen-card,
+    .view.scene-rooms .screen-card,
+    .view.scene-final .screen-card,
+    .view.scene-secret .screen-card {
+      animation-duration: 940ms;
+    }
+
+    .summary-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 18px;
+      margin-top: 16px;
     }
 
-    .result-tag {
-      border-radius: 999px;
+    .summary-pill {
       padding: 10px 14px;
+      border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       color: var(--text);
-      font-size: 0.92rem;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      font-size: 0.9rem;
+    }
+
+    .signature {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #fff5e4;
+      line-height: 1.9;
+    }
+
+    .secret-card {
+      text-align: center;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      background:
+        radial-gradient(circle at top, rgba(130, 217, 210, 0.14), transparent 24%),
+        linear-gradient(180deg, rgba(9, 21, 37, 0.92), rgba(6, 14, 24, 0.96));
+    }
+
+    .constellation {
+      position: relative;
+      width: min(62vw, 240px);
+      height: 180px;
+      margin: 0 auto;
+    }
+
+    .constellation span {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.94), rgba(243, 199, 140, 0.14));
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.24);
+    }
+
+    .constellation::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 0 22%, rgba(255, 255, 255, 0.12) 23% 24%, transparent 25% 48%, rgba(255, 255, 255, 0.12) 49% 50%, transparent 51%);
+      opacity: 0.44;
+    }
+
+    .action-stack {
+      display: grid;
+      gap: 12px;
     }
 
     .toast {
       position: fixed;
       left: 50%;
       bottom: calc(18px + env(safe-area-inset-bottom));
-      transform: translate(-50%, 24px);
-      width: min(calc(100% - 28px), 420px);
+      transform: translate(-50%, 26px);
+      width: min(calc(100% - 26px), 420px);
       padding: 14px 18px;
-      border-radius: 16px;
-      background: rgba(11, 21, 38, 0.92);
+      border-radius: 18px;
+      background: rgba(8, 17, 31, 0.92);
       border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: var(--shadow);
-      opacity: 0;
-      transition: opacity var(--transition), transform var(--transition);
-      z-index: 50;
-      text-align: center;
       color: var(--text);
+      opacity: 0;
+      transition: opacity 280ms var(--ease), transform 280ms var(--ease);
+      z-index: 10;
+      text-align: center;
+      pointer-events: none;
     }
 
-    .toast.show {
+    .toast.is-visible {
       opacity: 1;
       transform: translate(-50%, 0);
     }
 
-    .footer-note {
-      margin-top: 12px;
-      text-align: center;
-      color: rgba(239, 233, 223, 0.56);
-      font-size: 0.86rem;
+    body[data-scene="intro"] {
+      background:
+        radial-gradient(circle at top, rgba(130, 217, 210, 0.2), transparent 26%),
+        radial-gradient(circle at 80% 10%, rgba(243, 199, 140, 0.16), transparent 22%),
+        linear-gradient(180deg, #07101d, #081a2d 50%, #06111d);
     }
 
-    .result-panel .button-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    body[data-scene="identify"] {
+      background:
+        radial-gradient(circle at 16% 10%, rgba(130, 217, 210, 0.16), transparent 22%),
+        radial-gradient(circle at 82% 8%, rgba(243, 199, 140, 0.12), transparent 20%),
+        linear-gradient(180deg, #07101c, #0b182a 52%, #07111e);
     }
 
-    @media (max-width: 420px) {
-      .panel {
-        padding: 18px;
+    body[data-scene="future"] {
+      background:
+        radial-gradient(circle at 22% 12%, rgba(130, 217, 210, 0.14), transparent 24%),
+        radial-gradient(circle at 78% 10%, rgba(243, 199, 140, 0.14), transparent 20%),
+        linear-gradient(180deg, #08101d, #0c1b30 54%, #07111c);
+    }
+
+    body[data-scene="sea"],
+    body[data-scene="secret"] {
+      background:
+        radial-gradient(circle at top, rgba(90, 151, 199, 0.2), transparent 26%),
+        radial-gradient(circle at 76% 12%, rgba(243, 199, 140, 0.1), transparent 18%),
+        linear-gradient(180deg, #050c17, #081628 54%, #030912);
+    }
+
+    body[data-scene="final"] {
+      background:
+        radial-gradient(circle at top, rgba(243, 199, 140, 0.16), transparent 24%),
+        radial-gradient(circle at 18% 14%, rgba(130, 217, 210, 0.16), transparent 22%),
+        linear-gradient(180deg, #08101d, #102034 54%, #08111d);
+    }
+
+    body[data-scene="rooms"] {
+      background:
+        radial-gradient(circle at 18% 10%, rgba(130, 217, 210, 0.14), transparent 22%),
+        radial-gradient(circle at 84% 12%, rgba(255, 236, 201, 0.1), transparent 18%),
+        linear-gradient(180deg, #08101c, #0d1a2b 54%, #08111b);
+    }
+
+    body[data-scene="humor"] {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(243, 199, 140, 0.12), transparent 22%),
+        radial-gradient(circle at 14% 16%, rgba(130, 217, 210, 0.1), transparent 20%),
+        linear-gradient(180deg, #07101b, #0b1626 54%, #06101a);
+    }
+
+    body[data-scene="reconstruct"] {
+      background:
+        radial-gradient(circle at 50% 8%, rgba(130, 217, 210, 0.18), transparent 22%),
+        radial-gradient(circle at 74% 16%, rgba(243, 199, 140, 0.12), transparent 20%),
+        linear-gradient(180deg, #06101d, #0a182c 54%, #08111d);
+    }
+
+    @media (max-width: 560px) {
+      .screen-card {
+        padding: 20px;
       }
 
-      .hero-badge-grid,
-      .options-grid {
+      .hero-meta,
+      .confirm-options,
+      .token-grid,
+      .atmosphere-grid {
         grid-template-columns: 1fr;
       }
 
-      .processing-stage-rail,
-      .result-panel .button-row {
+      .button-row {
+        display: grid;
         grid-template-columns: 1fr;
       }
 
-      .option-btn {
-        min-height: 96px;
+      .sea-floor {
+        flex-direction: column;
+        align-items: stretch;
       }
     }
 
@@ -1096,669 +1649,1623 @@
   </style>
 </head>
 <body>
-  <div class="ambient-grid" aria-hidden="true"></div>
-  <div class="particle-layer" id="particleLayer" aria-hidden="true"></div>
-  <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+  <div id="ambientGrid" class="ambient-grid" aria-hidden="true"></div>
+  <div id="particleLayer" class="particle-layer" aria-hidden="true"></div>
+  <div id="glowLayer" class="glow-layer" aria-hidden="true"></div>
 
-  <main class="page-shell">
-    <div class="app">
-      <section class="screen active" id="introScreen" aria-labelledby="heroTitle">
-        <div class="panel hero-panel">
-          <div>
-            <div class="label-chip" id="heroChip"></div>
-            <div class="classified-line" id="heroClassified"></div>
-            <h1 class="hero-title" id="heroTitle"></h1>
-            <p class="hero-subtitle" id="heroSubtitle"></p>
+  <main class="app-shell">
+    <header class="hud" id="hud">
+      <div class="hud-mark" id="hudMark"></div>
+      <div class="hud-copy">
+        <div class="hud-title" id="hudTitle"></div>
+        <div class="hud-subtitle" id="hudSubtitle"></div>
+      </div>
+      <div class="hud-progress" id="hudProgress"></div>
+    </header>
 
-            <div class="hero-badge-grid" id="heroBadges"></div>
-          </div>
-
-          <div>
-            <div class="note" id="heroNote"></div>
-            <div class="button-row">
-              <button class="primary-btn" id="startBtn" type="button"></button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="screen" id="choicesScreen" aria-labelledby="choicesTitle">
-        <div class="panel">
-          <div class="section-head">
-            <div class="label-chip" id="choicesChip"></div>
-            <h2 class="section-title" id="choicesTitle"></h2>
-            <p class="section-copy" id="choicesCopy"></p>
-          </div>
-
-          <div id="questionGroups"></div>
-
-          <div class="helper-card" id="helperText"></div>
-
-          <div class="button-row">
-            <button class="primary-btn" id="processBtn" type="button" disabled></button>
-            <button class="ghost-btn" id="backBtn" type="button"></button>
-          </div>
-        </div>
-      </section>
-
-      <section class="screen" id="processingScreen" aria-labelledby="processingTitle">
-        <div class="panel processing-panel">
-          <div class="label-chip" id="processingChip"></div>
-          <div class="section-head">
-            <h2 class="section-title" id="processingTitle"></h2>
-            <p class="section-copy" id="processingCopy"></p>
-          </div>
-
-          <div class="processing-visual" aria-hidden="true">
-            <div class="scanner-core" id="scannerCore">
-              <div class="scanner-center">
-                <div class="scanner-value" id="progressValueLarge">0%</div>
-                <div class="scanner-caption" id="processingOrbitalLabel"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="processing-stage-rail" id="processingStages"></div>
-
-          <div class="progress-meta">
-            <span id="executionLabel"></span>
-            <span id="progressValue">0%</span>
-          </div>
-          <div class="progress-shell" aria-hidden="true">
-            <div class="progress-bar" id="progressBar"></div>
-          </div>
-
-          <div class="progress-meta">
-            <div style="display:flex;align-items:center;gap:10px;">
-              <span class="pulse-dot" aria-hidden="true"></span>
-              <span id="processingStatus"></span>
-            </div>
-            <span id="processingMode"></span>
-          </div>
-
-          <div class="processing-log" id="processingLog" aria-live="polite"></div>
-        </div>
-      </section>
-
-      <section class="screen" id="resultScreen" aria-labelledby="resultTitle">
-        <div class="panel result-panel">
-          <div class="label-chip" id="resultChip"></div>
-          <div class="result-card">
-            <div class="result-eyebrow" id="resultEyebrow"></div>
-            <h2 class="result-title" id="resultTitle"></h2>
-            <p class="result-copy result-copy-lead" id="resultLead"></p>
-            <p class="result-copy" id="resultText"></p>
-            <div class="result-highlight" id="resultHighlight"></div>
-            <div class="signature-line" id="signatureLine"></div>
-            <div class="result-tags" id="resultTags"></div>
-          </div>
-
-          <div class="button-row">
-            <button class="secondary-btn" id="restartBtn" type="button"></button>
-            <button class="primary-btn" id="shareBtn" type="button"></button>
-          </div>
-
-          <div class="footer-note" id="footerNote"></div>
-        </div>
-      </section>
-    </div>
+    <section class="view-frame" id="viewFrame"></section>
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
   <script>
-    const COPY = {
+    const CONFIG = {
+      recipientName: "دنيا",
+      gameTitle: "إشارة من دنيا القادمة",
+      subtitle: "نسخة هادية ومخفية من يوم أحسن شوية",
+      insideJokePlaceholder: "",
+      signatureLine: "من النسخة اللي جاية من قدّام شوية... واللي لسه عندها ذوق وحنية كفاية تدلّع دنيا لما تحتاج.",
       meta: {
-        title: "بروتوكول الإصلاح العاطفي",
-        description: "تجربة عربية أنيقة وخفيفة على شكل ملف سري لتحسين المود.",
-        ogTitle: "تم فتح الملف السري",
-        ogDescription: "بروتوكول تحسين مود مصمم لشخص واحد فقط."
+        title: "إشارة من دنيا القادمة",
+        description: "تجربة رقمية هادية ومصممة مخصوص لدنيا.",
+        ogTitle: "إشارة من دنيا القادمة",
+        ogDescription: "ملف خاص جدًا معمول علشان دنيا تاخد نَفَس ومساحة وهدوء."
       },
-      profile: {
-        recipientName: "دنيا",
-        fallbackName: "دنيا",
-        insideJokeLine: ""
+      journey: [
+        { id: "intro", hud: "بداية الإشارة" },
+        { id: "identify", hud: "تثبيت الهوية" },
+        { id: "dossier", hud: "الملف المصنّف" },
+        { id: "future", hud: "رسالة لقدّام" },
+        { id: "lab", hud: "معمل الهدوء" },
+        { id: "sea", hud: "غرفة البحر" },
+        { id: "rooms", hud: "ورا الأوضة" },
+        { id: "humor", hud: "تشخيص جانبي" },
+        { id: "reconstruct", hud: "إعادة التركيب" },
+        { id: "final", hud: "الرسالة الأخيرة" },
+        { id: "secret", hud: "النهاية السرية" },
+        { id: "replay", hud: "بعد كده" }
+      ],
+      ui: {
+        copied: "اتنسخ. ابعتيه براحتك وقت ما تحبي.",
+        secretLocked: "لسه فيه إشارة ناقصة في البحر.",
+        secretHint: "النجمة الصح + انعكاس القمر + لمسة القمر + تثبيت النبضة = باب مستخبي.",
+        starFound: "النجمة دي كانت شايلة سر صغير.",
+        reflectionTouched: "المية قالت: كمّلي... فيه حاجة بتتفتح.",
+        moonTouched: "القمر سلّم على دنيا بهدوء.",
+        horizonTouched: "الأفق وسّع المساحة شوية.",
+        pulseDone: "النبضة استقرت. الجو بقى أهدى فعلًا.",
+        chooseThree: "اختاري 3 حاجات بالظبط عشان المعمل يكمل.",
+        identifyReady: "تمام. السيستم اقتنع إنه وصل لدنيا فعلًا.",
+        identityNotReady: "لسه لمسة أو اتنين ونتأكد إن الإشارة في مكانها الصح.",
+        moonLabel: "لمسة للقمر",
+        horizonLabel: "لمسة للأفق",
+        roomDetailFound: "الركنة دي كان فيها سطر مستخبي فعلًا."
       },
-      hero: {
-        chip: "بروتوكول مصنّف",
-        classified: "مصمم بعناية مخصوص لدنيا",
-        title: "تم فتح الملف السري",
-        accent: "الملف السري",
-        subtitle:
-          "فيه نسخة خاصة من بروتوكول إصلاح المود، معمولة بذوق هادي مخصوص لدنيا علشان تاخد معاملة ألطف، وراحة أوسع، ويوم أهون شوية.",
-        badges: [
-          { label: "نوع المهمة", body: "رفع المعنويات بأسلوب شيك ومن غير مبالغة" },
-          { label: "الوجهة", body: "شخص محدد يستحق اهتمام متفصّل على مقاسه" },
-          { label: "زمن التنفيذ", body: "أقل من دقيقة وخفيفة على الموبايل" },
-          { label: "مستوى الدقة", body: "كفاية عشان يلقط المزاج حتى لو بيستخبى" }
+      intro: {
+        eyebrow: "إشارة زمنية خاصة",
+        title: "إشارة من دنيا القادمة",
+        accent: "دنيا القادمة",
+        copy:
+          "دي مش صفحة عادية، ولا حركة لطيفة والسلام. دي ركنة معمولة مخصوص لدنيا: طالبة طب، صاحبة الأيام الطويلة، والنسخة اللي بتكمل باحترام شديد حتى لما مخها يبقى ساكت من كتر الإجهاد.",
+        subcopy:
+          "النسخة اللي بعتت الإشارة دي عارفة شكل الأوضة آخر اليوم، الكتب المفتوحة من غير تركيز، والتعب اللي مش بيصرخ... بس بيقعد في الجسم والعينين والتفكير. فبدل ما تسيب دنيا لوحدها مع الهدوء الثقيل، بنت لها مكان ناعم عند البحر شوية.",
+        metaCards: [
+          { label: "حالة الإشارة", body: "وصلت واضحة رغم زحمة التفكير ودوشة الواجبات" },
+          { label: "نوع الإرهاق", body: "هادي، متراكم، ومؤدب زيادة عن اللزوم" },
+          { label: "وجهة الملف", body: "دنيا، ومحدش غيرها فعلًا" },
+          { label: "غرض الفتح", body: "مساحة رفق مش نصايح" }
         ],
-        note: "خدي نفس صغير وابدئي. الباقي النظام متكفل بيه.",
-        startButton: "ابدئي البروتوكول"
+        pills: ["دنيا", "طالبة طب", "بحر هادي"],
+        startButton: "افتحي الإشارة"
       },
-      choices: {
-        chip: "المرحلة الأولى: التقاط الإشارات",
-        title: "خلّينا نقرأ المود صح",
+      identify: {
+        eyebrow: "مرحلة التثبيت",
+        title: "السيستم بيبص على بصمة دنيا الهادية",
         copy:
-          "اختاري حاجة واحدة من كل قسم يا دنيا. كل إجابة هتقربنا من نسخة أهدى وأدق من التوصية الخاصة ليكي.",
-        helperPending:
-          "لسه محتاجين {{remaining}} اختيارات عشان البروتوكول يشتغل بكامل الدقة.",
-        helperReady: "تمام. كل الإشارات وصلت، والتوصية الخاصة جاهزة للاعتماد.",
-        processButton: "اعتمدي التحليل",
-        backButton: "رجوع",
-        questions: [
+          "بدل الأسئلة الناشفة، الإشارة بتحاول تتأكد من 3 حاجات صغيرة: الاسم الصح، المجال اللي واخد طاقة اليوم، والمكان اللي شايل أغلب الضغط بصمت.",
+        signalTitle: "مستوى تطابق الإشارة",
+        signalHint: "كل اختيار صح بيفك طبقة من الضباب، ويأكد إن الملف وصل لصاحبته فعلًا.",
+        statusLines: [
+          "الإشارة لسه بتقرب من النبرة الصح.",
+          "كويس. أول ملامح دنيا ظهرت في السيستم.",
+          "واضح جدًا إننا قريبين من صاحبة الملف.",
+          "تم التأكيد الكامل: دي دنيا فعلًا، بنفس هدوءها وتعبها المؤدب."
+        ],
+        rows: [
           {
-            key: "moodFix",
-            title: "حاجة بتحسن مودك",
-            counter: "1/3",
+            key: "name",
+            label: "الاسم اللي الإشارة منادياه",
             options: [
-              { emoji: "☕", title: "قهوة رايقة", desc: "من النوع اللي يظبط الجو من أول رشفة" },
-              { emoji: "🎧", title: "بلاي ليست حلوة", desc: "صوت مرتب يدخل المزاج بهدوء" },
-              { emoji: "🍨", title: "حاجة ساقعة ولذيذة", desc: "حل سريع ومحترم لأي تكشيرة" },
-              { emoji: "🌙", title: "هوا بالليل", desc: "لفة بسيطة توسّع النفس شوية" }
-            ]
+              { id: "donia", title: "دنيا", tiny: "وده الاختيار الطبيعي جدًا" },
+              { id: "someone", title: "أي حد معدّي", tiny: "وده عبث لذيذ بس غير دقيق" }
+            ],
+            correct: "donia"
           },
           {
-            key: "place",
-            title: "مكان نفسك تروحيه",
-            counter: "2/3",
+            key: "field",
+            label: "الحاجة اللي واخدة كتف اليوم كله",
             options: [
-              { emoji: "🌊", title: "البحر", desc: "هدوء ونفَس أوسع من أي دوشة" },
-              { emoji: "☕", title: "كافيه هادي", desc: "قعدة مرتبة وكلام على المزاج" },
-              { emoji: "🌆", title: "ممشى شيك", desc: "خطوتين يغيّروا شكل اليوم" },
-              { emoji: "✨", title: "مكان جديد", desc: "تفصيلة فيها فضول وانبساط" }
-            ]
+              { id: "med", title: "طب", tiny: "يعني عقل شغال، وضغط شغال، وضمير صاحي" },
+              { id: "vacation", title: "إجازة مفتوحة", tiny: "أمنية جميلة بس مش دي الحقيقة" }
+            ],
+            correct: "med"
           },
           {
-            key: "comfort",
-            title: "حاجة بتحبيها لما تكوني مخنوقة",
-            counter: "3/3",
+            key: "zone",
+            label: "المكان اللي بيشوف دنيا كتير زيادة",
             options: [
-              { emoji: "💬", title: "كلام يهون", desc: "حد يسمع كويس ويخفف الجو" },
-              { emoji: "🍫", title: "حاجة بحبها", desc: "تفصيلة صغيرة لكن مفعولها كبير" },
-              { emoji: "🚗", title: "خروجة سريعة", desc: "فصل مؤقت ومرتب عن أي ضغط" },
-              { emoji: "😂", title: "ضحكة محترمة", desc: "حاجة تفك المود من غير افتعال" }
-            ]
+              { id: "room", title: "الأوضة", tiny: "اللي بقت شاهدة على السهر والمذاكرة والملل" },
+              { id: "festival", title: "وسط دوشة حفلة", tiny: "الإشارة دي حساسة جدًا للدوشة" }
+            ],
+            correct: "room"
           }
+        ],
+        backButton: "ارجعي للإشارة",
+        continueButton: "كمّلي للملف المصنّف"
+      },
+      dossier: {
+        eyebrow: "ملف مصنّف",
+        title: "الملف الزمني الخاص بدنيا",
+        copy:
+          "ده مش CV ولا تقرير بارد. ده قراءة حنينة لشخصية بنت شاطرة وذكية ولطيفة، بس واخدة على نفسها حمل تقيل من غير ما تعمل دوشة حواليه.",
+        cards: [
+          { label: "الاسم", value: "دنيا" },
+          { label: "التصنيف", value: "عاقلة زيادة عن اللزوم وبقلب مؤدب" },
+          { label: "الحالة الحالية", value: "إجهاد هادي + فراغ في المخ من كتر السحب" },
+          { label: "الاحتياج الحالي", value: "رفق، نفس واسع، ومشهد بحر ساكت" }
+        ],
+        metrics: [
+          { label: "نسبة الطيبة", text: "عالية بشكل يحرج أي تقرير", percent: 94 },
+          { label: "مستوى المسؤولية", text: "أكتر من المطلوب أحيانًا", percent: 91 },
+          { label: "درجة التحمل", text: "مشكلتها إنها بتستحمل في هدوء", percent: 92 },
+          { label: "حجم الاستحقاق للراحة", text: "واضح جدًا ومش قابل للنقاش", percent: 98 }
+        ],
+        footer:
+          "ملاحظة جانبية من السيستم: مفيش أي منطق يخلي الراحة تبقى رفاهية في حالة دنيا. خصوصًا لما الطموح شغال، والضمير صاحي، والجسم بيسكت بدل ما يشتكي.",
+        continueButton: "افتحي رسالة دنيا القادمة"
+      },
+      future: {
+        eyebrow: "رسالة من قدّام",
+        title: "نسخة مستقبلية من دنيا بتتكلم",
+        copy:
+          "الصوت اللي جاي هنا مش وعظ، ولا كلام motivational محفوظ. دي دنيا من قدّام شوية: عدّت من نفس الأوضة، نفس تراكم المحاضرات، ونفس نوع الإرهاق اللي يبان هادي بس ياكل من جوه.",
+        echoes: [
+          "معلومة جانبية: النسخة دي فاكرة ريحة السهرة الطويلة اللي بتفضل معلقة في الأوضة.",
+          "ملحوظة زمنية: الفراغ اللي في المخ ساعات بيبقى من فرط الاستهلاك، مش من قلة المحاولة.",
+          "تنبيه لطيف: التعب اللي من غير صوت بيستهلك أسرع من التعب اللي بيتقال.",
+          "مراجعة هادية: الراحة مش خيانة للطموح، دي الطريقة الوحيدة علشان يفضل طموحًا محترمًا.",
+          "تأكيد نهائي: المستقبل لسه فاتح مكانه لدنيا، ومش مستعجل عليها بالشكل المرعب اللي اليوم بيصوره.",
+          "ترجمة بحرية: الهدوء مش هروب، الهدوء إعادة توازن لشخص اتطلب منه كتير."
+        ],
+        messages: [
+          "يا دنيا، أنا فاكرة الأوضة دي كويس: المكتب اللي عليه كل حاجة مفتوحة، والجسم اللي قاعد في مكانه، والعقل اللي المفروض يستقبل كمان صفحة بس خلاص بقى زي الأرض بعد سحب طويل.",
+          "فاكرة الإحساس اللي ييجي لما تبصي في الكلام وإنتي أصلًا فاهمة، لكن المخ مش راضي يفتح باب جديد. لا غباء، ولا كسل. ده إرهاق محترم ومكتوم لدرجة إنه محتاج حد يترجمه بدل ما يحكم عليه.",
+          "في الطب في ضغط واضح، وفي ضغط ملوش صوت. نوع تعب يخلّي الواحدة تبان ثابتة جدًا من بره، وفي الحقيقة محتاجة حد يقلل الإضاءة، ويوسّع النفس، ويقولها: تمام، كفاية شد النهارده.",
+          "إنتي مش محتاجة تبقي أقل طموحًا علشان ترتاحي. ومش محتاجة تنكري تعبك علشان تفضلي قوية. القوة اللي من غير رفق بتاكل صاحبتها على مهل، وإنتي تستاهلي نوع أرقى من التعامل مع نفسك.",
+          "أنا جاية من قدّام أقولك إن المستقبل اللي إنتي خايفة عليه شوية، ومتمسكة بيه شوية، لسه موجود. ما راحش. هو بس محتاج دنيا توصله وهي حنينة على نفسها، مش ماشية عليه وهي ناشفة من جوه.",
+          "ولو البحر الهادي بيشدك، فده مش هروب. ده جسمك وعقلك بيقولوا بلغة محترمة: إحنا محتاجين مساحة أوسع، صوت أقل، وموجة بطيئة تفتكرنا إننا مش آلة."
+        ],
+        nextButton: "الرسالة اللي بعدها",
+        doneButton: "ادخلي معمل الهدوء"
+      },
+      lab: {
+        eyebrow: "معمل الهدوء",
+        title: "إعادة ضبط يوم دنيا بهدوء",
+        copy:
+          "هنا مفيش أسئلة تقليدية. في معايرات صغيرة، هادية، شكلها أقرب لترميم اليوم من جوه بدل تقييمه.",
+        atmosphereTitle: "أي جو يلمّ دنيا من غير كلام كتير؟",
+        atmosphereCopy: "مش أحسن مشهد في الدنيا. المشهد اللي يخلي الكتف ينزل سنتيمتر، والنفس يدخل من غير مقاومة.",
+        atmospheres: [
+          {
+            id: "sea-night",
+            title: "بحر ساكت بالليل",
+            tiny: "قمر بعيد، موجة بطيئة، ومفيش حد مستعجل"
+          },
+          {
+            id: "rain-corner",
+            title: "ركنة شباك ومطر",
+            tiny: "نور خافت وصوت يهدي التفكير بدل ما يزنه"
+          },
+          {
+            id: "desk-no-pressure",
+            title: "مكتب من غير ضغط",
+            tiny: "ضوء ناعم وورق موجود بس مش بيهددك"
+          },
+          {
+            id: "soft-cafe",
+            title: "كافيه هادي جدًا",
+            tiny: "وشوش قليلة وقعدة تشبه هدنة آدمية محترمة"
+          }
+        ],
+        lighterTitle: "اختاري 3 حاجات ترجع دنيا لنفسها",
+        lighterCopy: "مش حاجات تنقذ العالم. حاجات صغيرة بس تعرف تفك اليوم من رقبته.",
+        lighterPool: [
+          { id: "voice", title: "صوت يهون", tiny: "حد يسمع ويهدي من غير شرح كتير" },
+          { id: "walk", title: "لفة قصيرة", tiny: "مشوار بسيط يرجّع الإحساس بالجسم" },
+          { id: "coffee", title: "حاجة دافية", tiny: "تفصيلة صغيرة تغيّر النبرة كلها" },
+          { id: "sea", title: "ريحة بحر", tiny: "ولو مؤقتًا في الخيال" },
+          { id: "sleep", title: "نوم نضيف", tiny: "مش سقوط من الإجهاد، نوم له كرامة" },
+          { id: "laugh", title: "ضحكة هادية", tiny: "مش مهرجان، بس خفة راقية" }
+        ],
+        stabilityTitle: "ثبّتي نبضة اليوم بإيد دنيا",
+        stabilityCopy: "حطي صباعك على النبضة شوية. مش علشان تنجزي حاجة. علشان الجسم يفتكر إن مفيش حد بيجري وراه دلوقتي.",
+        holdIdle: "حطي صباعك على النبضة لحد ما الإشارة تهدى.",
+        holdActive: "كمّلي شوية... الجو بيفك فعلًا.",
+        holdDone: "النبضة استقرت. كده اليوم بقى ألين شوية.",
+        statusLow: "لسه في شد واضح. الدنيا محتاجة رفق أكتر من الشرح.",
+        statusMid: "أحسن. في جزء من الحمل نزل فعلًا.",
+        statusHigh: "واضح إن النفس وسّع. دي المنطقة اللي كانت مستنياكي.",
+        continueButton: "افتحي غرفة البحر"
+      },
+      sea: {
+        eyebrow: "غرفة البحر",
+        title: "مساحة دنيا الهادية",
+        copy:
+          "البحر هنا معمول كأنه امتداد لسكوت دنيا، بس من النوع اللي يريح. أفق مفتوح، موج بطيء، قمر بعيد، وحاجات صغيرة لو اتلمست تفتح كلام كان مستخبي جوه اليوم.",
+        fragmentsTitle: "الشظايا اللي اتفتحت",
+        emptyFragments: "لسه البحر ساكت. لمسي نجمة، صدفة، القمر، أو خط الأفق.",
+        whisperIntro: "الموج لسه بيبص من بعيد. لمسة واحدة صح، وهيبدأ يحكي.",
+        stars: [
+          {
+            id: "star-1",
+            label: "نجمة أولى",
+            reveal: "فيه فرق كبير بين إن دنيا تبقى قوية، وبين إنها تفضل مشدودة طول الوقت كأن ده المطلوب منها."
+          },
+          {
+            id: "star-2",
+            label: "نجمة مخفية",
+            reveal: "النجمة دي شايلة clue صغير: مش كل باب بيتفتح من فوق... بعضهم بيتفتح من انعكاس المية، وبعضهم من لمسة قمر ساكتة."
+          },
+          {
+            id: "star-3",
+            label: "نجمة هادية",
+            reveal: "نسخة قدّام من دنيا بتؤكد إن البحر عنده حق: البطء ساعات أذكى من الاستنزاف اللي متغطي باسم الانضباط."
+          }
+        ],
+        shells: [
+          {
+            id: "shell-1",
+            label: "صدفة أولى",
+            reveal: "مش لازم كل يوم يثبت حاجة. بعض الأيام يكفي جدًا إنها تعدّي بنعومة من غير ما تسيب دنيا ناشفة من جوه."
+          },
+          {
+            id: "shell-2",
+            label: "صدفة تانية",
+            reveal: "الملل ساعات مش ملل. ساعات بيبقى المخ بيقول بأدب شديد: أنا exhausted ومحتاج مساحة أوسع من الأوضة."
+          }
+        ],
+        moonReveal:
+          "القمر قال: دنيا لما تهدى شوية، أفكارها بترجع لها بنفسها من غير ما تتشد من شعرها.",
+        horizonReveal:
+          "خط الأفق قال: فيه حياة أوسع من جدول الأسبوع، ولسه فيها مكان كبير لدنيا وهي مرتاحة.",
+        reflectionButton: "المسي انعكاس القمر",
+        reflectionReveal:
+          "الانعكاس قال بهدوء: لما دنيا تلاحظ الحاجات الصغيرة، التعب يفقد جزء من هيبته والباب السري يبان وحده.",
+        continueButton: "سيبي البحر يفتح الباب اللي بعده"
+      },
+      rooms: {
+        eyebrow: "ورا الأوضة",
+        title: "العالم اللي بعد واقع المذاكرة",
+        copy:
+          "لو في باب خفي ورا اليوم الطويل، فغالبًا بيفتح على مكان مش طالب من دنيا أداء ولا تركيز ولا ترتيب. بس طالب منها تكون موجودة وبس.",
+        rooms: [
+          {
+            id: "sea-balcony",
+            label: "بلكونة بحر",
+            title: "بلكونة البحر اللي مفيهاش مواعيد",
+            body: "هواء واسع، كرسي مريح، وأفق يخلي القلب يفتكر إنه أكبر من جدول اليوم فعلًا. مفيش مراجعة، مفيش deadline، بس دنيا والهواء.",
+            tiny: "البحر هنا مش بيطلب غير نفس كامل.",
+            whisper: "في الركنة دي، دنيا مش مطالبة تثبت أي حاجة.",
+            detailLabel: "المسي سور البلكونة",
+            detailReveal: "سور البلكونة قال: الطموح ميمنعش أبدًا إن دنيا تاخد نَفَس كامل بين خطوة والتانية."
+          },
+          {
+            id: "rain-window",
+            label: "ركنة مطر",
+            title: "ركنة شباك والمطر شغال لحسابك",
+            body: "نور جانبي خافت، كوب دافي، والجو كله بيقول: محدش مستني من دنيا دلوقتي أي أداء بطولي. يكفي إنها تقعد وتسيب المطر يعمل الباقي.",
+            tiny: "الهدوء هنا بطيء، نضيف، ومقنع جدًا.",
+            whisper: "هنا، الصوت الوحيد الأعلى من التفكير هو المطر.",
+            detailLabel: "المسي زجاج الشباك",
+            detailReveal: "قطرة على الزجاج همست: حتى العقل اللي دارس كتير محتاج منظر يغسله من جوه."
+          },
+          {
+            id: "soft-desk",
+            label: "مكتب بلا ضغط",
+            title: "مكتب لأول مرة مش بيزعق",
+            body: "ورق موجود، بس من غير لهجة تهديد. ضوء ناعم، وكتب ساكتة، ومذاكرة ينفع تتأجل نص ساعة من غير ما الضمير يعمل اجتماع طارئ.",
+            tiny: "نسخة إنسانية من نفس المكان اللي تعبك فيه ساعات كتير.",
+            whisper: "حتى المكتب يستاهل يتعلم يتكلم مع دنيا بنبرة أهدى.",
+            detailLabel: "المسي نور المكتب",
+            detailReveal: "النور الصغير قال: ينفع المكان اللي شهد الضغط يتعلّم يبقى أهدى على صاحبته."
+          },
+          {
+            id: "city-corner",
+            label: "قعدة مدينة",
+            title: "ركنة مدينة من بعيد",
+            body: "شباك واسع، نور بعيد، وإحساس إن العالم مستمر حتى لو دنيا أخذت هدنة صغيرة محترمة. مش لازم كل حاجة تقف علشان ترتاح عشر دقايق.",
+            tiny: "هدوء من غير عزلة، وونس من غير زحمة.",
+            whisper: "هنا، المستقبل باين من بعيد بس مش بيجري عليكي.",
+            detailLabel: "المسي النور البعيد",
+            detailReveal: "النور البعيد فكّر دنيا إن المستقبل مش بيجري عليها، هو بس مستنيها توصل له بنَفَس."
+          }
+        ],
+        continueButton: "سيبي السيستم يهزر شوية"
+      },
+      humor: {
+        eyebrow: "مقاطعة مرخصة",
+        title: "القسم الكوميدي تدخل بشكل محترم",
+        copy:
+          "السيستم شايف إن في استحقاق واضح لهدنة آدمية، وفي نفس الوقت رافض يسيب دنيا من غير تشخيص جانبي صغير بنبرة مصرية مؤدبة ومش سخيفة.",
+        lines: [
+          "تم رصد حالة صمت أكاديمي محترمة: الجسم قاعد، والعقل عامل نفسه online وهو في الحقيقة محتاج شاطئ.",
+          "الأوضة سجلت حضور أعلى من بعض الزملاء، وده إنجاز مش لازم نحتفل بيه بصراحة.",
+          "المخ حاليًا شغال بسياسة: أدي الحد الأدنى لحد ما تيجي موجة آدمية محترمة.",
+          "فيه اشتباه قوي إن دنيا شايلة مستقبلها بإتقان زيادة، ومحتاجة حد يشيل عنها اليوم ولو خمس دقايق.",
+          "السيستم بيؤكد إن الملل هنا مش دلع. ده تراكم أنيق عامل نفسه هدوء."
+        ],
+        button: "هات تشخيص جانبي تاني",
+        continueButton: "ابدئي إعادة تركيب الرسالة"
+      },
+      reconstruct: {
+        eyebrow: "إعادة تركيب",
+        title: "السيستم بيفك الرسالة من جديد",
+        copy:
+          "اختيارات دنيا، والبحر، والركنة اللي قلبها مال لها، بيتجمعوا هنا في مرحلة أهدى وأفخم من أي loading bar عادي.",
+        steps: [
+          "تم تثبيت جو {{atmosphere}} كأفضل باب هدوء لدنيا النهارده.",
+          "تم التقاط الأشياء اللي ترجّع الروح مكانها: {{lighterA}}، {{lighterB}}، {{lighterC}}.",
+          "تم تأكيد إن الركنة الأقرب لقلب دنيا دلوقتي هي {{room}}.",
+          "جاري وزن إرهاق طالبة الطب الهادي مع طموحها العالي من غير ما نقلل من أي طرف.",
+          "تم التقاط الأثر المتبقي من البحر ومن لحظة الهدوء اللي وافقت تفتحها دنيا.",
+          "تم تجهيز الرسالة الأخيرة بنجاح وبذوق واضح."
+        ],
+        runningLabel: "إعادة تركيب بطيئة وشيك",
+        completeLabel: "الرسالة اتجمعت",
+        continueButton: "افتحي الرسالة الأخيرة"
+      },
+      final: {
+        eyebrow: "النتيجة النهائية",
+        title: "الرسالة اللي كانت مستنية دنيا",
+        accent: "مستنية دنيا",
+        footer: "النسخة دي معمولة مخصوص علشان دنيا تفتكر إن الرقة مش ضد الطموح، وإن الهدوء مش رفاهية بعيدة عنها.",
+        copyShortButton: "انسخي السطر المختصر",
+        continueButton: "افتحي النهاية السرية",
+        replayButton: "روحي لآخر الخيارات",
+        openingTemplates: [
+          "يا دنيا، الرسالة دي مش جاية تزود عليكي حاجة. جاية تفك الشد من كتفك شوية.",
+          "يا دنيا، واضح جدًا إن اللي محتاج يسمعه قلبك النهارده مش تعليمات جديدة، بل نبرة أهدى.",
+          "دنيا، في حد هنا شايفك بوضوح أكتر من اليوم نفسه."
+        ],
+        ambitionTemplates: [
+          "إنتي ماشية في طريق كبير، وفي طب تحديدًا الجهد مش بس في الساعات. الجهد كمان في الضمير الصاحي، وفي الإحساس الدائم إن فيه حاجة لازم تتعمل.",
+          "طموحك جميل ونضيف ومحترم، بس ساعات بيخلّي التعب يقعد جوه من غير ما ياخد حقه في الاعتراف.",
+          "كونك عاقلة ومسؤولة وبتكمّلي لا يلغي أبدًا إن في نسخة منك تحتاج رفق حقيقي، مش بس صبر."
+        ],
+        restoreTemplates: [
+          "علشان كده، النهارده شكله أقرب لـ {{atmosphere}}، ومعاه {{lighterA}} و{{lighterB}} و{{lighterC}}، ومساحة شبه {{room}}. مش كماليات... دي إسعافات هادية لروح اتسحبت منها طاقة كتير.",
+          "لو اليوم هيتصلّح من جوه، فالبداية غالبًا هتبقى من {{atmosphere}}، ومن حاجات صغيرة زي {{lighterA}} و{{lighterB}} و{{lighterC}}، ومن ركنة فيها ملمح {{room}}.",
+          "النسخة الألين من النهارده محتاجة {{atmosphere}}، وثلاث حاجات يعرفوا يهونوا الحمل: {{lighterA}} و{{lighterB}} و{{lighterC}}، وجو يذكّر بدنيا وهي قاعدة في {{room}} من غير ما حد يطلب منها حاجة."
+        ],
+        seaTemplates: [
+          "وميلك للبحر الهادي مفهوم جدًا، لأنك مش بتدوري على هروب. إنتي بتدوري على اتساع يلمّك بدل ما يضغطك.",
+          "السكينة اللي بتحبيها مش مبالغة. دي ذوق روح تعبت من الزحمة ومن فكرة إنها لازم تفضل شغالة طول الوقت."
+        ],
+        closeTemplates: [
+          "فخدي الرسالة دي كأنها مقعد هادي على البحر اتساب باسم دنيا شوية.",
+          "ولو كان مسموح لحد يبقى موظف الدعم الفني الرسمي لمود دنيا النهارده، فالمكان ده مقدّم الطلب بكل احترام.",
+          "والأهم: إنتي مش محتاجة تبقي أقل حلمًا علشان تبقي أهدى. محتاجة بس معاملة أحنّ شوية."
+        ],
+        asideTitle: "سطر اتساب مخصوص",
+        asideTemplates: [
+          "النسخة اللي جاية من قدّام بتقول: الدنيا بتهون على دنيا أسرع لما ما تبقاش لوحدها قدام الحمل كله.",
+          "ملاحظة بحرية: الهدوء ما بيحلش كل حاجة، بس بيفك عقد كتير في وقت قصير.",
+          "ملاحظة خاصة: حتى في الأيام اللي المخ فيها فاضي، قيمتك كاملة ومش مؤجلة."
+        ],
+        shortTemplates: [
+          "دنيا مش ناقصها قوة، دنيا ناقصها شوية هدوء على مقاس روحها.",
+          "النسخة النهارده بتقول: رفق صغير مع دنيا = فرق كبير في يومها.",
+          "دنيا محتاجة بحر ساكت، نفس واسع، وحد يفتكر يهون الدنيا عليها شوية."
         ]
       },
-      processing: {
-        chip: "المرحلة الثانية: المعالجة السرية",
-        title: "جاري تشغيل بروتوكول الإصلاح العاطفي",
-        copy:
-          "النظام دلوقتي بيوازن بين الراحة، والونس، والتوقيت الصح عشان يطلع توصية تليق بدنيا تحديدًا.",
-        executionLabel: "نسبة الاعتماد",
-        modeLabel: "وضع مصنّف",
-        orbitalLabel: "استقبال الإشارات",
-        bootStatus: "جارِ تهيئة القناة الخاصة...",
-        stages: ["استقبال", "معايرة", "تهدئة", "اعتماد"],
-        sequence: [
-          {
-            progress: 12,
-            stage: 0,
-            orbital: "استقبال الإشارات",
-            status: "جارِ فك تشفير الإشارات الأولية...",
-            log: "تم استقبال تفضيلات دنيا بنجاح."
-          },
-          {
-            progress: 31,
-            stage: 1,
-            orbital: "معايرة المزاج",
-            status: "جارِ مطابقة المزاج مع أنسب جرعة راحة...",
-            log: "تمت مراجعة ما يهدّي الأعصاب ويروق القلب."
-          },
-          {
-            progress: 58,
-            stage: 2,
-            orbital: "خفض التوتر",
-            status: "تم رصد احتياج واضح لمعاملة ألطف شوية...",
-            log: "النظام سجّل إن اليوم محتاج لمسة أحنّ من المعتاد."
-          },
-          {
-            progress: 82,
-            stage: 2,
-            orbital: "صياغة التوصية",
-            status: "جارِ تجهيز التوصية الخاصة بدنيا...",
-            log: "يتم الآن تركيب نسخة دافئة وخفيفة وشيك."
-          },
-          {
-            progress: 100,
-            stage: 3,
-            orbital: "اعتماد نهائي",
-            status: "تم قفل النتيجة النهائية واعتمادها.",
-            log: "البروتوكول جاهز للتنفيذ بشكل أنيق جدًا."
-          }
-        ]
+      secret: {
+        eyebrow: "لـ دنيا فقط",
+        title: "النهاية السرية",
+        lockedTitle: "الباب السري لسه مقفول",
+        lockedCopy:
+          "فيه باب هنا، بس ما بيتفتحش بالكلام. بيتفتح لما دنيا تلاحظ النجمة الصح، وتلمس انعكاس القمر، وتدي القمر نفسه لمسة، وتثبت النبضة لحد ما تهدى. التفاصيل الصغيرة هنا أذكى مما باين.",
+        unlockedLines: [
+          "يا دنيا، الحقيقة اللي مستخبية في آخر الملف بسيطة جدًا: مش كل اللي بيبان ثابت بيبقى مرتاح. وإنتي تستحقي حد يلاحظ الفرق من غير ما تشرحيه.",
+          "فيه مستقبل كبير فعلًا مستنيكي، بس الأجمل من الوصول له إنك توصلي له وإنتي لسه رخوة من جوه، ولسه فيكي مساحة للبحر والضحكة والراحة والإنسانية.",
+          "ولو الإشارة دي عملت حاجة، فهي إنها بنت لك دقايق صغيرة تحسي فيها إن في حد شاف الذكاء، والتعب، والهدوء، والطيبة، والحنين للسكينة... وقال: آه، دنيا تستاهل مكان أحنّ من كده."
+        ],
+        continueButton: "روحي لآخر الخيارات"
       },
-      result: {
-        chip: "المرحلة الأخيرة: التقرير المعتمد",
-        eyebrow: "نسخة مصممة مخصوص لدنيا",
-        title: "تم اعتماد التوصية الخاصة",
-        accent: "التوصية الخاصة",
-        leadTemplate:
-          "واضح إن دنيا محتاجة شوية <strong>{{moodFix}}</strong>، ونفَس لطيف شبه <strong>{{place}}</strong>، ومعاها <strong>{{comfort}}</strong> في التوقيت الصح.",
-        bodyTemplate:
-          "الخلاصة ببساطة: شوية هدوء، حاجة على ذوق دنيا، وضحكة مرتبة من غير أي استعراض زيادة. اليوم يخف لما حد يعاملها بلطف يليق بيها.",
-        highlightTemplate:
-          "الملحوظة الأهم: <strong>{{moodFix}}</strong> + <strong>{{place}}</strong> + <strong>{{comfort}}</strong> دي تركيبة قوية جدًا، خصوصًا لدنيا وهي المفروض تتدلع شوية النهارده.",
-        signature:
-          "ولو تحبي، أقدر أتولى أنا تنفيذ البروتوكول بنفسي النهارده... بهدوء وذوق طبعًا.",
-        restartButton: "تشغيل من جديد",
-        shareButton: "ابعتي النتيجة",
-        shareTitle: "نتيجة البروتوكول الخاص",
-        shareFallback: "النتيجة اتنسخت. ابعتيها في أي شات براحتك.",
-        manualCopyFallback: "لو النسخ ما اشتغلش، النتيجة قدامك جاهزة تتبعت.",
-        footer: "متصمم علشان يفتح بسرعة، يبان شيك، ويحس إنه معمول مخصوص ليكي."
+      replay: {
+        eyebrow: "بعد ما الإشارة خلصت",
+        title: "عايزة تعملي إيه بعد كده؟",
+        copy:
+          "التجربة دي ينفع تتعاد كل مرة بشكل مختلف شوية. لأن دنيا مش ثابتة، واليوم نفسه مش ثابت، والراحة ليها أبواب كتير ومودات أكتر.",
+        replay: "ابدئي التجربة من الأول",
+        anotherWorld: "بدّلي العالم الهادي",
+        secret: "افتحي النهاية السرية",
+        regenerate: "طلّعي رسالة أخيرة تانية",
+        copyShort: "انسخي السطر المختصر"
       }
     };
 
-    const state = {
-      selections: {
-        moodFix: null,
-        place: null,
-        comfort: null
+    const appState = {
+      currentScreen: "intro",
+      identity: {},
+      futureMessageIndex: 0,
+      calmAtmosphere: "",
+      lightThings: [],
+      signalStability: 18,
+      stabilityHoldDone: false,
+      stabilityHoldActive: false,
+      stabilityHoldTimer: null,
+      humorLine: "",
+      roomId: "sea-balcony",
+      visitedRoomIds: ["sea-balcony"],
+      openedRoomDetailIds: [],
+      roomDetailNote: "",
+      foundStarIds: [],
+      openedShellIds: [],
+      touchedReflection: false,
+      touchedMoon: false,
+      touchedHorizon: false,
+      seaWhisper: "",
+      fragmentNotes: [],
+      reconstructionRunning: false,
+      reconstructionDone: false,
+      reconstructionPercent: 0,
+      reconstructionLogs: [],
+      finalMessage: "",
+      finalAside: "",
+      finalShortLine: "",
+      secretUnlocked: false,
+      viewSeed: Math.random(),
+      toastTimer: null
+    };
+
+    const dom = {
+      body: document.body,
+      hudTitle: document.getElementById("hudTitle"),
+      hudSubtitle: document.getElementById("hudSubtitle"),
+      hudProgress: document.getElementById("hudProgress"),
+      viewFrame: document.getElementById("viewFrame"),
+      toast: document.getElementById("toast"),
+      particleLayer: document.getElementById("particleLayer")
+    };
+
+    const Utils = {
+      format(template, values) {
+        return template.replace(/\{\{(.*?)\}\}/g, (_, key) => values[key.trim()] ?? "");
       },
-      processingTimers: []
+      clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      },
+      sample(list) {
+        return list[Math.floor(Math.random() * list.length)];
+      },
+      shuffle(list) {
+        const clone = [...list];
+        for (let index = clone.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          [clone[index], clone[swapIndex]] = [clone[swapIndex], clone[index]];
+        }
+        return clone;
+      },
+      wait(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      },
+      showToast(message) {
+        dom.toast.textContent = message;
+        dom.toast.classList.add("is-visible");
+        clearTimeout(appState.toastTimer);
+        appState.toastTimer = setTimeout(() => {
+          dom.toast.classList.remove("is-visible");
+        }, 2200);
+      },
+      invalidateGeneratedState({ clearRoomDetail = false } = {}) {
+        appState.reconstructionRunning = false;
+        appState.reconstructionDone = false;
+        appState.reconstructionPercent = 0;
+        appState.reconstructionLogs = [];
+        appState.finalMessage = "";
+        appState.finalAside = "";
+        appState.finalShortLine = "";
+        if (clearRoomDetail) {
+          appState.roomDetailNote = "";
+        }
+      },
+      createParticles() {
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const count = reducedMotion ? 10 : 22;
+        const fragment = document.createDocumentFragment();
+
+        for (let index = 0; index < count; index += 1) {
+          const particle = document.createElement("span");
+          const size = 2 + Math.random() * 4;
+          particle.className = "particle";
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.left = `${Math.random() * 100}%`;
+          particle.style.bottom = `${-10 - Math.random() * 80}px`;
+          particle.style.animationDuration = `${12 + Math.random() * 14}s`;
+          particle.style.animationDelay = `${Math.random() * 12}s`;
+          fragment.appendChild(particle);
+        }
+
+        dom.particleLayer.appendChild(fragment);
+      }
     };
 
-    const elements = {
-      metaDescription: document.getElementById("metaDescription"),
-      metaOgTitle: document.getElementById("metaOgTitle"),
-      metaOgDescription: document.getElementById("metaOgDescription"),
-      heroChip: document.getElementById("heroChip"),
-      heroClassified: document.getElementById("heroClassified"),
-      heroTitle: document.getElementById("heroTitle"),
-      heroSubtitle: document.getElementById("heroSubtitle"),
-      heroBadges: document.getElementById("heroBadges"),
-      heroNote: document.getElementById("heroNote"),
-      choicesChip: document.getElementById("choicesChip"),
-      choicesTitle: document.getElementById("choicesTitle"),
-      choicesCopy: document.getElementById("choicesCopy"),
-      helperText: document.getElementById("helperText"),
-      footerNote: document.getElementById("footerNote"),
-      questionGroups: document.getElementById("questionGroups"),
-      processBtn: document.getElementById("processBtn"),
-      backBtn: document.getElementById("backBtn"),
-      startBtn: document.getElementById("startBtn"),
-      processingChip: document.getElementById("processingChip"),
-      processingTitle: document.getElementById("processingTitle"),
-      processingCopy: document.getElementById("processingCopy"),
-      processingStages: document.getElementById("processingStages"),
-      scannerCore: document.getElementById("scannerCore"),
-      progressBar: document.getElementById("progressBar"),
-      progressValue: document.getElementById("progressValue"),
-      progressValueLarge: document.getElementById("progressValueLarge"),
-      processingOrbitalLabel: document.getElementById("processingOrbitalLabel"),
-      executionLabel: document.getElementById("executionLabel"),
-      processingStatus: document.getElementById("processingStatus"),
-      processingMode: document.getElementById("processingMode"),
-      processingLog: document.getElementById("processingLog"),
-      resultChip: document.getElementById("resultChip"),
-      resultEyebrow: document.getElementById("resultEyebrow"),
-      resultTitle: document.getElementById("resultTitle"),
-      resultLead: document.getElementById("resultLead"),
-      resultText: document.getElementById("resultText"),
-      resultHighlight: document.getElementById("resultHighlight"),
-      signatureLine: document.getElementById("signatureLine"),
-      resultTags: document.getElementById("resultTags"),
-      resultCard: document.querySelector(".result-card"),
-      restartBtn: document.getElementById("restartBtn"),
-      shareBtn: document.getElementById("shareBtn"),
-      sparkleLayer: document.getElementById("sparkleLayer"),
-      particleLayer: document.getElementById("particleLayer"),
-      toast: document.getElementById("toast")
+    const ScreenManager = {
+      list: CONFIG.journey.map((item) => item.id),
+      get currentIndex() {
+        return this.list.indexOf(appState.currentScreen);
+      },
+      go(screenId) {
+        if (!this.list.includes(screenId)) return;
+        clearInterval(appState.stabilityHoldTimer);
+        appState.stabilityHoldTimer = null;
+        appState.stabilityHoldActive = false;
+        appState.currentScreen = screenId;
+        SceneRenderer.render();
+      },
+      next() {
+        const nextId = this.list[this.currentIndex + 1];
+        if (nextId) this.go(nextId);
+      },
+      reset() {
+        clearInterval(appState.stabilityHoldTimer);
+        appState.currentScreen = "intro";
+        appState.identity = {};
+        appState.futureMessageIndex = 0;
+        appState.calmAtmosphere = "";
+        appState.lightThings = [];
+        appState.signalStability = 18;
+        appState.stabilityHoldDone = false;
+        appState.stabilityHoldActive = false;
+        appState.stabilityHoldTimer = null;
+        appState.humorLine = HumorCommentSystem.random();
+        appState.roomId = "sea-balcony";
+        appState.visitedRoomIds = ["sea-balcony"];
+        appState.openedRoomDetailIds = [];
+        appState.roomDetailNote = "";
+        appState.foundStarIds = [];
+        appState.openedShellIds = [];
+        appState.touchedReflection = false;
+        appState.touchedMoon = false;
+        appState.touchedHorizon = false;
+        appState.seaWhisper = CONFIG.sea.whisperIntro;
+        appState.fragmentNotes = [];
+        appState.reconstructionRunning = false;
+        appState.reconstructionDone = false;
+        appState.reconstructionPercent = 0;
+        appState.reconstructionLogs = [];
+        appState.finalMessage = "";
+        appState.finalAside = "";
+        appState.finalShortLine = "";
+        appState.secretUnlocked = false;
+        appState.viewSeed = Math.random();
+        SceneRenderer.render();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     };
 
-    const screenIds = ["introScreen", "choicesScreen", "processingScreen", "resultScreen"];
+    const FutureMessageSystem = {
+      next() {
+        appState.futureMessageIndex = Utils.clamp(
+          appState.futureMessageIndex + 1,
+          0,
+          CONFIG.future.messages.length - 1
+        );
+        SceneRenderer.render();
+      },
+      complete() {
+        return appState.futureMessageIndex >= CONFIG.future.messages.length - 1;
+      }
+    };
 
-    function formatText(template, values) {
-      return template.replace(/\{\{(.*?)\}\}/g, (_, key) => values[key.trim()] ?? "");
-    }
+    const HumorCommentSystem = {
+      random() {
+        return Utils.sample(CONFIG.humor.lines);
+      },
+      roll() {
+        appState.humorLine = this.random();
+        SceneRenderer.render();
+      }
+    };
 
-    function renderAccentTitle(text, accent) {
-      if (!accent || !text.includes(accent)) return text;
-      return text.replace(accent, `<span class="accent">${accent}</span>`);
-    }
+    const HiddenEndingTrigger = {
+      check() {
+        appState.secretUnlocked =
+          appState.foundStarIds.includes("star-2") &&
+          appState.touchedReflection &&
+          appState.touchedMoon &&
+          appState.stabilityHoldDone &&
+          appState.visitedRoomIds.length >= 2 &&
+          appState.lightThings.length === 3;
+        return appState.secretUnlocked;
+      }
+    };
 
-    function getRecipientName() {
-      return COPY.profile.recipientName || COPY.profile.fallbackName;
-    }
+    const FinalMessageGenerator = {
+      generate() {
+        const atmosphere =
+          CONFIG.lab.atmospheres.find((item) => item.id === appState.calmAtmosphere)?.title ||
+          CONFIG.lab.atmospheres[0].title;
+        const picks = appState.lightThings.length ? appState.lightThings : CONFIG.lab.lighterPool.slice(0, 3).map((item) => item.title);
+        const room =
+          CONFIG.rooms.rooms.find((item) => item.id === appState.roomId)?.title ||
+          CONFIG.rooms.rooms[0].title;
+        const shortTemplate = Utils.sample(CONFIG.final.shortTemplates);
+        const opening = Utils.sample(CONFIG.final.openingTemplates);
+        const ambition = Utils.sample(CONFIG.final.ambitionTemplates);
+        const restore = Utils.format(Utils.sample(CONFIG.final.restoreTemplates), {
+          name: CONFIG.recipientName,
+          atmosphere,
+          room,
+          lighterA: picks[0] || "",
+          lighterB: picks[1] || "",
+          lighterC: picks[2] || ""
+        });
+        const seaLine = Utils.sample(CONFIG.final.seaTemplates);
+        const close = Utils.sample(CONFIG.final.closeTemplates);
+        const asideSource =
+          appState.roomDetailNote ||
+          appState.fragmentNotes[0] ||
+          CONFIG.rooms.rooms.find((item) => item.id === appState.roomId)?.whisper ||
+          Utils.sample(CONFIG.final.asideTemplates);
 
-    function applyHeadCopy() {
-      document.title = COPY.meta.title;
-      elements.metaDescription.setAttribute("content", COPY.meta.description);
-      elements.metaOgTitle.setAttribute("content", COPY.meta.ogTitle);
-      elements.metaOgDescription.setAttribute("content", COPY.meta.ogDescription);
-    }
+        appState.finalMessage = [opening, ambition, restore, seaLine, close]
+          .map((line) => `<span>${line}</span>`)
+          .join("");
+        appState.finalAside = asideSource;
 
-    function applyCopy() {
-      elements.heroChip.textContent = COPY.hero.chip;
-      elements.heroClassified.textContent = COPY.hero.classified;
-      elements.heroTitle.innerHTML = renderAccentTitle(COPY.hero.title, COPY.hero.accent);
-      elements.heroSubtitle.textContent = COPY.hero.subtitle;
-      elements.heroNote.textContent = COPY.hero.note;
-      elements.startBtn.textContent = COPY.hero.startButton;
+        if (CONFIG.insideJokePlaceholder) {
+          appState.finalMessage = `${appState.finalMessage}<span>${CONFIG.insideJokePlaceholder}</span>`;
+        }
 
-      elements.choicesChip.textContent = COPY.choices.chip;
-      elements.choicesTitle.textContent = COPY.choices.title;
-      elements.choicesCopy.textContent = COPY.choices.copy;
-      elements.processBtn.textContent = COPY.choices.processButton;
-      elements.backBtn.textContent = COPY.choices.backButton;
+        appState.finalShortLine = Utils.format(shortTemplate, {
+          name: CONFIG.recipientName,
+          atmosphere
+        });
+      }
+    };
 
-      elements.processingChip.textContent = COPY.processing.chip;
-      elements.processingTitle.textContent = COPY.processing.title;
-      elements.processingCopy.textContent = COPY.processing.copy;
-      elements.executionLabel.textContent = COPY.processing.executionLabel;
-      elements.processingStatus.textContent = COPY.processing.bootStatus;
-      elements.processingMode.textContent = COPY.processing.modeLabel;
-      elements.processingOrbitalLabel.textContent = COPY.processing.orbitalLabel;
+    const InteractionModules = {
+      identity: {
+        choose(group, value) {
+          appState.identity[group] = value;
+          SceneRenderer.render();
+        },
+        isReady() {
+          return CONFIG.identify.rows.every((row) => appState.identity[row.key] === row.correct);
+        },
+        progressCount() {
+          return CONFIG.identify.rows.filter((row) => appState.identity[row.key] === row.correct).length;
+        },
+        statusText() {
+          return CONFIG.identify.statusLines[this.progressCount()] || CONFIG.identify.statusLines[0];
+        }
+      },
+      lab: {
+        chooseAtmosphere(id) {
+          appState.calmAtmosphere = id;
+          Utils.invalidateGeneratedState();
+          SceneRenderer.render();
+        },
+        toggleThing(id) {
+          const found = CONFIG.lab.lighterPool.find((item) => item.id === id);
+          if (!found) return;
 
-      elements.resultChip.textContent = COPY.result.chip;
-      elements.resultEyebrow.textContent = COPY.result.eyebrow;
-      elements.resultTitle.innerHTML = renderAccentTitle(COPY.result.title, COPY.result.accent);
-      elements.signatureLine.textContent = COPY.result.signature;
-      elements.restartBtn.textContent = COPY.result.restartButton;
-      elements.shareBtn.textContent = COPY.result.shareButton;
-      elements.footerNote.textContent = COPY.result.footer;
+          if (appState.lightThings.includes(found.title)) {
+            appState.lightThings = appState.lightThings.filter((item) => item !== found.title);
+          } else if (appState.lightThings.length < 3) {
+            appState.lightThings = [...appState.lightThings, found.title];
+          } else {
+            Utils.showToast(CONFIG.ui.chooseThree);
+          }
 
-      renderHeroBadges();
-      renderProcessingStages();
-    }
+          HiddenEndingTrigger.check();
+          Utils.invalidateGeneratedState();
+          SceneRenderer.render();
+        },
+        refreshStabilityUI() {
+          const valueEl = dom.viewFrame.querySelector("[data-stability-value]");
+          const statusEl = dom.viewFrame.querySelector("[data-stability-status]");
+          const buttonEl = dom.viewFrame.querySelector("[data-lab-continue]");
+          const meterEl = dom.viewFrame.querySelector("[data-breath-meter]");
+          const pulseEl = dom.viewFrame.querySelector("[data-hold-button]");
+          const captionEl = dom.viewFrame.querySelector("[data-hold-caption]");
 
-    function renderHeroBadges() {
-      elements.heroBadges.innerHTML = COPY.hero.badges
-        .map(
-          (badge) => `
-            <div class="hero-badge">
-              <strong>${badge.label}</strong>
-              ${badge.body}
-            </div>
-          `
-        )
-        .join("");
-    }
+          if (valueEl) valueEl.textContent = `${Math.round(appState.signalStability)}%`;
+          if (statusEl) statusEl.textContent = this.statusText();
+          if (buttonEl) buttonEl.disabled = !this.canContinue();
+          if (meterEl) meterEl.style.width = `${Math.round(appState.signalStability)}%`;
+          if (pulseEl) {
+            pulseEl.classList.toggle("is-live", appState.stabilityHoldActive);
+            pulseEl.classList.toggle("is-done", appState.stabilityHoldDone);
+          }
+          if (captionEl) captionEl.textContent = this.holdCaption();
+        },
+        startStabilityHold() {
+          if (appState.stabilityHoldDone || appState.stabilityHoldActive) return;
 
-    function renderQuestions() {
-      elements.questionGroups.innerHTML = COPY.choices.questions
-        .map(
-          (question) => `
-            <section class="question-group">
-              <div class="question-card">
-                <div class="question-label">
-                  <h3>${question.title}</h3>
-                  <span class="counter-chip">${question.counter}</span>
+          clearInterval(appState.stabilityHoldTimer);
+          appState.stabilityHoldActive = true;
+          this.refreshStabilityUI();
+
+          appState.stabilityHoldTimer = setInterval(() => {
+            appState.signalStability = Utils.clamp(appState.signalStability + 4.2, 18, 100);
+            this.refreshStabilityUI();
+
+            if (appState.signalStability >= 100) {
+              clearInterval(appState.stabilityHoldTimer);
+              appState.stabilityHoldTimer = null;
+              appState.stabilityHoldDone = true;
+              appState.stabilityHoldActive = false;
+              Utils.invalidateGeneratedState();
+              Utils.showToast(CONFIG.ui.pulseDone);
+              HiddenEndingTrigger.check();
+              this.refreshStabilityUI();
+            }
+          }, 70);
+        },
+        stopStabilityHold() {
+          if (!appState.stabilityHoldActive) return;
+
+          clearInterval(appState.stabilityHoldTimer);
+          appState.stabilityHoldTimer = null;
+          appState.stabilityHoldActive = false;
+
+          if (!appState.stabilityHoldDone) {
+            appState.signalStability = Utils.clamp(appState.signalStability - 14, 18, 100);
+          }
+
+          this.refreshStabilityUI();
+        },
+        canContinue() {
+          return (
+            !!appState.calmAtmosphere &&
+            appState.lightThings.length === 3 &&
+            appState.stabilityHoldDone
+          );
+        },
+        holdCaption() {
+          if (appState.stabilityHoldDone) return CONFIG.lab.holdDone;
+          if (appState.stabilityHoldActive) return CONFIG.lab.holdActive;
+          return CONFIG.lab.holdIdle;
+        },
+        statusText() {
+          if (appState.stabilityHoldDone || appState.signalStability >= 88) return CONFIG.lab.statusHigh;
+          if (appState.signalStability >= 48) return CONFIG.lab.statusMid;
+          return CONFIG.lab.statusLow;
+        }
+      },
+      sea: {
+        openStar(id) {
+          const target = CONFIG.sea.stars.find((item) => item.id === id);
+          if (!target || appState.foundStarIds.includes(id)) return;
+
+          appState.foundStarIds = [...appState.foundStarIds, id];
+          appState.seaWhisper = target.reveal;
+          appState.fragmentNotes = [target.reveal, ...appState.fragmentNotes].slice(0, 5);
+          if (id === "star-2") {
+            Utils.showToast(CONFIG.ui.starFound);
+          }
+          HiddenEndingTrigger.check();
+          SceneRenderer.render();
+        },
+        openShell(id) {
+          const target = CONFIG.sea.shells.find((item) => item.id === id);
+          if (!target || appState.openedShellIds.includes(id)) return;
+
+          appState.openedShellIds = [...appState.openedShellIds, id];
+          appState.seaWhisper = target.reveal;
+          appState.fragmentNotes = [target.reveal, ...appState.fragmentNotes].slice(0, 5);
+          SceneRenderer.render();
+        },
+        touchReflection() {
+          if (!appState.touchedReflection) {
+            appState.touchedReflection = true;
+            appState.seaWhisper = CONFIG.sea.reflectionReveal;
+            appState.fragmentNotes = [CONFIG.sea.reflectionReveal, ...appState.fragmentNotes].slice(0, 5);
+            Utils.showToast(CONFIG.ui.reflectionTouched);
+          }
+          HiddenEndingTrigger.check();
+          SceneRenderer.render();
+        },
+        touchMoon() {
+          if (!appState.touchedMoon) {
+            appState.touchedMoon = true;
+            appState.seaWhisper = CONFIG.sea.moonReveal;
+            appState.fragmentNotes = [CONFIG.sea.moonReveal, ...appState.fragmentNotes].slice(0, 5);
+            Utils.showToast(CONFIG.ui.moonTouched);
+          }
+          HiddenEndingTrigger.check();
+          SceneRenderer.render();
+        },
+        touchHorizon() {
+          if (!appState.touchedHorizon) {
+            appState.touchedHorizon = true;
+            appState.seaWhisper = CONFIG.sea.horizonReveal;
+            appState.fragmentNotes = [CONFIG.sea.horizonReveal, ...appState.fragmentNotes].slice(0, 5);
+            Utils.showToast(CONFIG.ui.horizonTouched);
+          }
+          SceneRenderer.render();
+        }
+      },
+      rooms: {
+        select(id) {
+          appState.roomId = id;
+          if (!appState.visitedRoomIds.includes(id)) {
+            appState.visitedRoomIds = [...appState.visitedRoomIds, id];
+          }
+          Utils.invalidateGeneratedState({ clearRoomDetail: true });
+          HiddenEndingTrigger.check();
+          SceneRenderer.render();
+        },
+        randomize() {
+          appState.roomId = Utils.sample(CONFIG.rooms.rooms).id;
+          if (!appState.visitedRoomIds.includes(appState.roomId)) {
+            appState.visitedRoomIds = [...appState.visitedRoomIds, appState.roomId];
+          }
+          Utils.invalidateGeneratedState({ clearRoomDetail: true });
+          HiddenEndingTrigger.check();
+          SceneRenderer.render();
+        },
+        openDetail(id) {
+          const room = CONFIG.rooms.rooms.find((item) => item.id === id);
+          if (!room) return;
+
+          appState.roomId = id;
+          appState.roomDetailNote = room.detailReveal;
+          if (!appState.visitedRoomIds.includes(id)) {
+            appState.visitedRoomIds = [...appState.visitedRoomIds, id];
+          }
+          if (!appState.openedRoomDetailIds.includes(id)) {
+            appState.openedRoomDetailIds = [...appState.openedRoomDetailIds, id];
+            appState.fragmentNotes = [room.detailReveal, ...appState.fragmentNotes].slice(0, 5);
+            Utils.showToast(CONFIG.ui.roomDetailFound);
+          }
+          Utils.invalidateGeneratedState();
+          HiddenEndingTrigger.check();
+          SceneRenderer.render();
+        }
+      },
+      replay: {
+        copyShortLine() {
+          const text = appState.finalShortLine || CONFIG.final.footer;
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(text).then(
+              () => Utils.showToast(CONFIG.ui.copied),
+              () => Utils.showToast(CONFIG.ui.copied)
+            );
+          } else {
+            Utils.showToast(CONFIG.ui.copied);
+          }
+        }
+      }
+    };
+
+    const SceneRenderer = {
+      updateMeta() {
+        document.title = CONFIG.meta.title;
+        const description = document.getElementById("metaDescription");
+        const ogTitle = document.getElementById("metaOgTitle");
+        const ogDescription = document.getElementById("metaOgDescription");
+        const pageTitle = document.getElementById("pageTitle");
+
+        if (description) description.setAttribute("content", CONFIG.meta.description);
+        if (ogTitle) ogTitle.setAttribute("content", CONFIG.meta.ogTitle);
+        if (ogDescription) ogDescription.setAttribute("content", CONFIG.meta.ogDescription);
+        if (pageTitle) pageTitle.textContent = CONFIG.meta.title;
+      },
+      updateHud() {
+        const current = CONFIG.journey.find((item) => item.id === appState.currentScreen);
+        dom.hudTitle.textContent = CONFIG.gameTitle;
+        dom.hudSubtitle.textContent = current?.hud || CONFIG.subtitle;
+        dom.hudProgress.innerHTML = CONFIG.journey
+          .map((item, index) => {
+            const currentIndex = ScreenManager.currentIndex;
+            const activeClass =
+              item.id === appState.currentScreen
+                ? "is-active"
+                : index < currentIndex
+                  ? "is-done"
+                  : "";
+            return `<span class="progress-dot ${activeClass}"></span>`;
+          })
+          .join("");
+      },
+      render() {
+        if (!appState.humorLine) {
+          appState.humorLine = HumorCommentSystem.random();
+        }
+
+        if (appState.currentScreen === "final" && !appState.finalMessage) {
+          FinalMessageGenerator.generate();
+        }
+
+        dom.body.dataset.scene = appState.currentScreen;
+        this.updateMeta();
+        this.updateHud();
+        dom.viewFrame.innerHTML = `<div class="view scene-${appState.currentScreen}">${this.templates[appState.currentScreen]()}</div>`;
+
+        if (appState.currentScreen === "reconstruct" && !appState.reconstructionDone && !appState.reconstructionRunning) {
+          ReconstructionEngine.start();
+        }
+      },
+      templates: {
+        intro() {
+          return `
+            <section class="screen-card">
+              <div class="hero-orb" aria-hidden="true"></div>
+              <div class="hero-layout">
+                <div class="stack">
+                  <div class="eyebrow">${CONFIG.intro.eyebrow}</div>
+                  <div>
+                    <h1 class="display-title">${CONFIG.intro.title.replace(CONFIG.intro.accent, `<span class="accent">${CONFIG.intro.accent}</span>`)}</h1>
+                    <p class="copy">${CONFIG.intro.copy}</p>
+                  </div>
+                  <p class="soft-copy">${CONFIG.intro.subcopy}</p>
+                  <div class="hero-meta">
+                    ${CONFIG.intro.metaCards
+                      .map(
+                        (item) => `
+                          <div class="meta-card">
+                            <strong>${item.label}</strong>
+                            <span class="soft-copy">${item.body}</span>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
                 </div>
-                <div class="options-grid">
-                  ${question.options
-                    .map(
-                      (option) => `
-                        <button
-                          class="option-btn"
-                          type="button"
-                          data-group="${question.key}"
-                          data-value="${option.title}"
-                          aria-pressed="false"
-                        >
-                          <span class="option-check" aria-hidden="true"></span>
-                          <span class="emoji" aria-hidden="true">${option.emoji}</span>
-                          <span class="title">${option.title}</span>
-                          <span class="desc">${option.desc}</span>
-                        </button>
-                      `
-                    )
-                    .join("")}
+                <div class="stack">
+                  <div class="pill-row">
+                    ${CONFIG.intro.pills.map((item) => `<span class="pill">${item}</span>`).join("")}
+                  </div>
+                  <div class="button-row">
+                    <button class="btn" data-action="go" data-target="identify">${CONFIG.intro.startButton}</button>
+                  </div>
                 </div>
               </div>
             </section>
-          `
-        )
-        .join("");
-    }
+          `;
+        },
+        identify() {
+          const identityCount = InteractionModules.identity.progressCount();
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="stack">
+                  <div class="eyebrow">${CONFIG.identify.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.identify.title}</h2>
+                    <p class="copy">${CONFIG.identify.copy}</p>
+                  </div>
+                  <div class="signal-strip">
+                    <div class="signal-head">
+                      <div class="signal-title">${CONFIG.identify.signalTitle}</div>
+                      <div class="message-index">${identityCount} / ${CONFIG.identify.rows.length}</div>
+                    </div>
+                    <div class="signal-track">
+                      ${CONFIG.identify.rows
+                        .map((_, index) => `<span class="signal-dot ${index < identityCount ? "is-live" : ""}"></span>`)
+                        .join("")}
+                    </div>
+                    <div class="signal-status">${InteractionModules.identity.statusText()}</div>
+                    <div class="soft-copy">${CONFIG.identify.signalHint}</div>
+                  </div>
+                  <div class="identity-grid">
+                    ${CONFIG.identify.rows
+                      .map(
+                        (row) => `
+                          <div class="glass-card confirm-row">
+                            <div class="confirm-head">
+                              <div class="confirm-label">${row.label}</div>
+                              <div class="soft-copy">${appState.identity[row.key] === row.correct ? "✓" : "..."}</div>
+                            </div>
+                            <div class="confirm-options">
+                              ${row.options
+                                .map(
+                                  (option) => `
+                                    <button
+                                      class="choice-chip ${appState.identity[row.key] === option.id ? "is-selected" : ""}"
+                                      data-action="identity"
+                                      data-group="${row.key}"
+                                      data-value="${option.id}"
+                                    >
+                                      ${option.title}
+                                      <span class="tiny">${option.tiny}</span>
+                                    </button>
+                                  `
+                                )
+                                .join("")}
+                            </div>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+                <div class="stack">
+                  <p class="soft-copy">
+                    ${InteractionModules.identity.isReady() ? CONFIG.ui.identifyReady : CONFIG.ui.identityNotReady}
+                  </p>
+                  <div class="button-row">
+                    <button class="btn" data-action="go" data-target="dossier" ${InteractionModules.identity.isReady() ? "" : "disabled"}>
+                      ${CONFIG.identify.continueButton}
+                    </button>
+                    <button class="btn-ghost" data-action="go" data-target="intro">${CONFIG.identify.backButton}</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        dossier() {
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="stack">
+                  <div class="eyebrow">${CONFIG.dossier.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.dossier.title}</h2>
+                    <p class="copy">${CONFIG.dossier.copy}</p>
+                  </div>
+                  <div class="dossier-grid">
+                    ${CONFIG.dossier.cards
+                      .map(
+                        (item) => `
+                          <div class="glass-card">
+                            <strong>${item.label}</strong>
+                            <div class="copy">${item.value}</div>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                  <div class="dossier-row">
+                    ${CONFIG.dossier.metrics
+                      .map(
+                        (metric) => `
+                          <div class="metric-line">
+                            <div class="metric-head">
+                              <span>${metric.label}</span>
+                              <span>${metric.text}</span>
+                            </div>
+                            <div class="metric-track">
+                              <div class="metric-fill" style="--fill:${metric.percent}%"></div>
+                            </div>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+                <div class="stack">
+                  <div class="fragment-card">
+                    <p class="soft-copy">${CONFIG.dossier.footer}</p>
+                  </div>
+                  <div class="button-row">
+                    <button class="btn" data-action="go" data-target="future">${CONFIG.dossier.continueButton}</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        future() {
+          const currentMessage = CONFIG.future.messages[appState.futureMessageIndex];
+          const currentEcho = CONFIG.future.echoes[appState.futureMessageIndex] || CONFIG.future.echoes[0];
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="stack message-stage">
+                  <div class="eyebrow">${CONFIG.future.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.future.title}</h2>
+                    <p class="copy">${CONFIG.future.copy}</p>
+                  </div>
+                  <div class="message-card">
+                    <div class="message-index">
+                      ${appState.futureMessageIndex + 1} / ${CONFIG.future.messages.length}
+                    </div>
+                    <div class="message-trail">
+                      ${CONFIG.future.messages
+                        .map((_, index) => `<span class="${index <= appState.futureMessageIndex ? "is-active" : ""}"></span>`)
+                        .join("")}
+                    </div>
+                    <div class="message-text">${currentMessage}</div>
+                    <div class="message-echo">${currentEcho}</div>
+                  </div>
+                </div>
+                <div class="button-row">
+                  ${
+                    FutureMessageSystem.complete()
+                      ? `<button class="btn" data-action="go" data-target="lab">${CONFIG.future.doneButton}</button>`
+                      : `<button class="btn" data-action="future-next">${CONFIG.future.nextButton}</button>`
+                  }
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        lab() {
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="stack">
+                  <div class="eyebrow">${CONFIG.lab.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.lab.title}</h2>
+                    <p class="copy">${CONFIG.lab.copy}</p>
+                  </div>
+                  <div class="lab-grid">
+                    <div class="module-card">
+                      <div class="module-head">
+                        <div class="module-title">${CONFIG.lab.atmosphereTitle}</div>
+                      </div>
+                      <p class="module-copy">${CONFIG.lab.atmosphereCopy}</p>
+                      <div class="atmosphere-grid">
+                        ${CONFIG.lab.atmospheres
+                          .map(
+                            (item) => `
+                              <button
+                                class="atmosphere-card ${appState.calmAtmosphere === item.id ? "is-selected" : ""}"
+                                data-action="atmosphere"
+                                data-value="${item.id}"
+                              >
+                                ${item.title}
+                                <span class="tiny">${item.tiny}</span>
+                              </button>
+                            `
+                          )
+                          .join("")}
+                      </div>
+                    </div>
 
-    function renderProcessingStages() {
-      elements.processingStages.innerHTML = COPY.processing.stages
-        .map((stage, index) => `<div class="stage-pill" data-stage="${index}">${stage}</div>`)
-        .join("");
-    }
+                    <div class="module-card">
+                      <div class="module-head">
+                        <div class="module-title">${CONFIG.lab.lighterTitle}</div>
+                        <div class="soft-copy">${appState.lightThings.length} / 3</div>
+                      </div>
+                      <p class="module-copy">${CONFIG.lab.lighterCopy}</p>
+                      <div class="token-grid">
+                        ${CONFIG.lab.lighterPool
+                          .map(
+                            (item) => `
+                              <button
+                                class="token ${appState.lightThings.includes(item.title) ? "is-selected" : ""}"
+                                data-action="lighter"
+                                data-value="${item.id}"
+                              >
+                                ${item.title}
+                                <span class="tiny">${item.tiny}</span>
+                              </button>
+                            `
+                          )
+                          .join("")}
+                      </div>
+                    </div>
 
-    function bindQuestionEvents() {
-      elements.questionGroups.addEventListener("click", (event) => {
-        const button = event.target.closest(".option-btn");
-        if (!button) return;
+                    <div class="module-card">
+                      <div class="module-head">
+                        <div class="module-title">${CONFIG.lab.stabilityTitle}</div>
+                        <div class="soft-copy" data-stability-value>${Math.round(appState.signalStability)}%</div>
+                      </div>
+                      <p class="module-copy">${CONFIG.lab.stabilityCopy}</p>
+                      <div class="stabilize-chamber">
+                        <button
+                          class="pulse-button ${appState.stabilityHoldActive ? "is-live" : ""} ${appState.stabilityHoldDone ? "is-done" : ""}"
+                          data-action="hold-stability"
+                          data-hold-button
+                          type="button"
+                        >
+                          <span class="pulse-core"></span>
+                          <span class="pulse-caption" data-hold-caption>${InteractionModules.lab.holdCaption()}</span>
+                        </button>
+                        <div class="breath-meter">
+                          <span data-breath-meter style="width:${Math.round(appState.signalStability)}%"></span>
+                        </div>
+                        <div class="stability-status" data-stability-status>${InteractionModules.lab.statusText()}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="button-row">
+                  <button class="btn" data-action="go" data-target="sea" data-lab-continue ${InteractionModules.lab.canContinue() ? "" : "disabled"}>
+                    ${CONFIG.lab.continueButton}
+                  </button>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        sea() {
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="stack">
+                  <div class="eyebrow">${CONFIG.sea.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.sea.title}</h2>
+                    <p class="copy">${CONFIG.sea.copy}</p>
+                  </div>
+                  <div class="sea-stage">
+                    <button class="moon-touch" data-action="moon" aria-label="${CONFIG.ui.moonLabel}">
+                      <div class="moon" aria-hidden="true"></div>
+                    </button>
+                    <div class="wave wave-1" aria-hidden="true"></div>
+                    <div class="wave wave-2" aria-hidden="true"></div>
+                    <div class="wave wave-3" aria-hidden="true"></div>
+                    <button class="horizon-touch" data-action="horizon" aria-label="${CONFIG.ui.horizonLabel}"></button>
+                    <div class="sea-overlay">
+                      ${CONFIG.sea.stars
+                        .map(
+                          (item) => `
+                            <button
+                              class="sea-node"
+                              data-action="star"
+                              data-value="${item.id}"
+                              style="justify-self:${item.id === "star-1" ? "start" : item.id === "star-2" ? "center" : "end"}"
+                            ></button>
+                          `
+                        )
+                        .join("")}
+                    </div>
+                    <div class="sea-floor">
+                      ${CONFIG.sea.shells
+                        .map(
+                          (item) => `
+                            <button class="sea-shell" data-action="shell" data-value="${item.id}">
+                              ${item.label}
+                            </button>
+                          `
+                        )
+                        .join("")}
+                      <button class="reflection-touch" data-action="reflection">${CONFIG.sea.reflectionButton}</button>
+                    </div>
+                    <div class="sea-whisper">${appState.seaWhisper || CONFIG.sea.whisperIntro}</div>
+                  </div>
+                  <div class="fragment-card">
+                    <strong>${CONFIG.sea.fragmentsTitle}</strong>
+                    <div class="stack" style="margin-top:12px;">
+                      ${
+                        appState.fragmentNotes.length
+                          ? appState.fragmentNotes
+                              .map((note) => `<div class="soft-copy">${note}</div>`)
+                              .join("")
+                          : `<div class="soft-copy">${CONFIG.sea.emptyFragments}</div>`
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div class="button-row">
+                  <button class="btn" data-action="go" data-target="rooms">${CONFIG.sea.continueButton}</button>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        rooms() {
+          const currentRoom = CONFIG.rooms.rooms.find((item) => item.id === appState.roomId) || CONFIG.rooms.rooms[0];
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="stack">
+                  <div class="eyebrow">${CONFIG.rooms.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.rooms.title}</h2>
+                    <p class="copy">${CONFIG.rooms.copy}</p>
+                  </div>
+                  <div class="room-grid">
+                    ${CONFIG.rooms.rooms
+                      .map(
+                        (room) => `
+                          <button
+                            class="room-selector ${appState.roomId === room.id ? "is-selected" : ""}"
+                            data-action="room"
+                            data-value="${room.id}"
+                          >
+                            ${room.label}
+                            <span class="tiny">${room.tiny}</span>
+                          </button>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                  <div class="room-stage room-${currentRoom.id}">
+                    <div class="room-copy">
+                      <div class="eyebrow">${currentRoom.label}</div>
+                      <h3 class="section-title" style="font-size:1.8rem;">${currentRoom.title}</h3>
+                      <p class="copy">${currentRoom.body}</p>
+                      <p class="soft-copy">${currentRoom.tiny}</p>
+                      <button class="room-detail-button" data-action="room-detail" data-value="${currentRoom.id}">
+                        ${currentRoom.detailLabel}
+                      </button>
+                      <div class="room-whisper">${currentRoom.whisper}</div>
+                      ${
+                        appState.roomDetailNote && appState.roomId === currentRoom.id
+                          ? `<div class="soft-copy">${appState.roomDetailNote}</div>`
+                          : ""
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div class="button-row">
+                  <button class="btn" data-action="go" data-target="humor">${CONFIG.rooms.continueButton}</button>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        humor() {
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="diagnostic-card">
+                  <div class="eyebrow">${CONFIG.humor.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.humor.title}</h2>
+                    <p class="copy">${CONFIG.humor.copy}</p>
+                  </div>
+                  <div class="humor-display">${appState.humorLine}</div>
+                </div>
+                <div class="button-row">
+                  <button class="btn-soft" data-action="humor-roll">${CONFIG.humor.button}</button>
+                  <button class="btn" data-action="go" data-target="reconstruct">${CONFIG.humor.continueButton}</button>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        reconstruct() {
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="decode-card">
+                  <div class="eyebrow">${CONFIG.reconstruct.eyebrow}</div>
+                  <div>
+                    <h2 class="section-title">${CONFIG.reconstruct.title}</h2>
+                    <p class="copy">${CONFIG.reconstruct.copy}</p>
+                  </div>
+                  <div class="decode-orb" style="--progress:${appState.reconstructionPercent * 3.6}deg">
+                    <div class="decode-center">
+                      <div class="decode-percent">${appState.reconstructionPercent}%</div>
+                      <div class="decode-label">${appState.reconstructionDone ? CONFIG.reconstruct.completeLabel : CONFIG.reconstruct.runningLabel}</div>
+                    </div>
+                  </div>
+                  <div class="decode-log">
+                    ${appState.reconstructionLogs.map((line) => `<div class="decode-line">${line}</div>`).join("")}
+                  </div>
+                </div>
+                <div class="button-row">
+                  <button class="btn" data-action="go" data-target="final" ${appState.reconstructionDone ? "" : "disabled"}>
+                    ${CONFIG.reconstruct.continueButton}
+                  </button>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        final() {
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="reveal-card">
+                  <div class="eyebrow">${CONFIG.final.eyebrow}</div>
+                  <h2 class="final-title">${CONFIG.final.title.replace(CONFIG.final.accent, `<span class="accent">${CONFIG.final.accent}</span>`)}</h2>
+                  <div class="final-message">${appState.finalMessage}</div>
+                  <div class="final-aside">
+                    <strong>${CONFIG.final.asideTitle}</strong>
+                    <div class="soft-copy">${appState.finalAside}</div>
+                  </div>
+                  <div class="summary-grid">
+                    ${[
+                      CONFIG.lab.atmospheres.find((item) => item.id === appState.calmAtmosphere)?.title || CONFIG.lab.atmospheres[0].title,
+                      CONFIG.rooms.rooms.find((item) => item.id === appState.roomId)?.label || CONFIG.rooms.rooms[0].label,
+                      ...appState.lightThings
+                    ]
+                      .map((item) => `<span class="summary-pill">${item}</span>`)
+                      .join("")}
+                  </div>
+                  <div class="signature">${CONFIG.signatureLine}</div>
+                </div>
+                <div class="fragment-card">
+                  <p class="soft-copy">${CONFIG.final.footer}</p>
+                </div>
+                <div class="button-row">
+                  <button class="btn-soft" data-action="copy-short">${CONFIG.final.copyShortButton}</button>
+                  <button class="btn" data-action="go" data-target="secret">${CONFIG.final.continueButton}</button>
+                  <button class="btn-ghost" data-action="go" data-target="replay">${CONFIG.final.replayButton}</button>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        secret() {
+          const unlocked = HiddenEndingTrigger.check();
+          if (!unlocked) {
+            return `
+              <section class="screen-card">
+                <div class="section-layout">
+                  <div class="secret-card">
+                    <div class="eyebrow">${CONFIG.secret.eyebrow}</div>
+                    <h2 class="section-title">${CONFIG.secret.lockedTitle}</h2>
+                    <p class="copy">${CONFIG.secret.lockedCopy}</p>
+                    <p class="soft-copy">${CONFIG.ui.secretHint}</p>
+                  </div>
+                  <div class="button-row">
+                    <button class="btn-soft" data-action="toast-secret">${CONFIG.sea.reflectionButton}</button>
+                    <button class="btn" data-action="go" data-target="replay">${CONFIG.secret.continueButton}</button>
+                  </div>
+                </div>
+              </section>
+            `;
+          }
 
-        const group = button.dataset.group;
-        const value = button.dataset.value;
-        state.selections[group] = value;
-
-        document.querySelectorAll(`.option-btn[data-group="${group}"]`).forEach((option) => {
-          const isSelected = option === button;
-          option.classList.toggle("selected", isSelected);
-          option.setAttribute("aria-pressed", String(isSelected));
-        });
-
-        updateProcessButton();
-      });
-    }
-
-    function updateProcessButton() {
-      const selectedCount = Object.values(state.selections).filter(Boolean).length;
-      const totalQuestions = COPY.choices.questions.length;
-      const remaining = totalQuestions - selectedCount;
-
-      elements.processBtn.disabled = selectedCount !== totalQuestions;
-      elements.helperText.textContent =
-        remaining === 0
-          ? COPY.choices.helperReady
-          : formatText(COPY.choices.helperPending, { remaining });
-    }
-
-    function showScreen(targetId) {
-      screenIds.forEach((id) => {
-        const screen = document.getElementById(id);
-        screen.classList.toggle("active", id === targetId);
-      });
-    }
-
-    function clearProcessingTimers() {
-      state.processingTimers.forEach((timer) => clearTimeout(timer));
-      state.processingTimers = [];
-    }
-
-    function setProcessingProgress(progress) {
-      elements.progressBar.style.width = `${progress}%`;
-      elements.progressValue.textContent = `${progress}%`;
-      elements.progressValueLarge.textContent = `${progress}%`;
-      elements.scannerCore.style.setProperty("--progress-angle", `${(progress / 100) * 360}deg`);
-    }
-
-    function setActiveStage(stageIndex) {
-      document.querySelectorAll(".stage-pill").forEach((pill) => {
-        pill.classList.toggle("active", Number(pill.dataset.stage) === stageIndex);
-      });
-    }
-
-    function resetProcessingVisual() {
-      elements.processingLog.innerHTML = "";
-      elements.processingStatus.textContent = COPY.processing.bootStatus;
-      elements.processingMode.textContent = COPY.processing.modeLabel;
-      elements.processingOrbitalLabel.textContent = COPY.processing.orbitalLabel;
-      setProcessingProgress(0);
-      setActiveStage(-1);
-    }
-
-    function startProcessing() {
-      clearProcessingTimers();
-      resetProcessingVisual();
-      showScreen("processingScreen");
-
-      COPY.processing.sequence.forEach((entry, index) => {
-        const timer = setTimeout(() => {
-          elements.processingStatus.textContent = entry.status;
-          elements.processingOrbitalLabel.textContent = entry.orbital;
-          setProcessingProgress(entry.progress);
-          setActiveStage(entry.stage);
-
-          const line = document.createElement("div");
-          line.className = "log-line";
-          line.textContent = entry.log;
-          elements.processingLog.appendChild(line);
-        }, index * 920);
-
-        state.processingTimers.push(timer);
-      });
-
-      const finishTimer = setTimeout(() => {
-        buildResult();
-        showScreen("resultScreen");
-        triggerSparkles();
-      }, COPY.processing.sequence.length * 920 + 420);
-
-      state.processingTimers.push(finishTimer);
-    }
-
-    function buildResult() {
-      const moodFix = state.selections.moodFix;
-      const place = state.selections.place;
-      const comfort = state.selections.comfort;
-      const nameInline = getRecipientName();
-      const jokeLine = COPY.profile.insideJokeLine
-        ? `<br /><br />${COPY.profile.insideJokeLine}`
-        : "";
-
-      elements.resultLead.innerHTML = formatText(COPY.result.leadTemplate, {
-        nameInline,
-        moodFix,
-        place,
-        comfort
-      });
-      elements.resultText.innerHTML = `${COPY.result.bodyTemplate}${jokeLine}`;
-      elements.resultHighlight.innerHTML = formatText(COPY.result.highlightTemplate, {
-        moodFix,
-        place,
-        comfort
-      });
-      elements.signatureLine.textContent = COPY.result.signature;
-      elements.resultTags.innerHTML = [moodFix, place, comfort]
-        .map((tag) => `<span class="result-tag">${tag}</span>`)
-        .join("");
-    }
-
-    async function shareResult() {
-      const tags = Object.values(state.selections).filter(Boolean).join(" • ");
-      const text = [
-        COPY.result.shareTitle,
-        "",
-        elements.resultLead.textContent.trim(),
-        elements.resultText.textContent.trim(),
-        elements.resultHighlight.textContent.trim(),
-        "",
-        elements.signatureLine.textContent.trim(),
-        "",
-        tags
-      ].join("\n");
-
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: COPY.result.shareTitle,
-            text
-          });
-          return;
-        } catch (error) {
-          if (error && error.name === "AbortError") return;
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="secret-card">
+                  <div class="eyebrow">${CONFIG.secret.eyebrow}</div>
+                  <div class="constellation" aria-hidden="true">
+                    <span style="top:12%;right:18%;"></span>
+                    <span style="top:38%;right:50%;"></span>
+                    <span style="top:22%;left:18%;"></span>
+                    <span style="bottom:18%;left:34%;"></span>
+                    <span style="bottom:8%;right:24%;"></span>
+                  </div>
+                  <h2 class="section-title">${CONFIG.secret.title}</h2>
+                  ${CONFIG.secret.unlockedLines.map((line) => `<p class="copy">${line}</p>`).join("")}
+                </div>
+                <div class="button-row">
+                  <button class="btn" data-action="go" data-target="replay">${CONFIG.secret.continueButton}</button>
+                </div>
+              </div>
+            </section>
+          `;
+        },
+        replay() {
+          return `
+            <section class="screen-card">
+              <div class="section-layout">
+                <div class="ending-card">
+                  <div class="eyebrow">${CONFIG.replay.eyebrow}</div>
+                  <h2 class="section-title">${CONFIG.replay.title}</h2>
+                  <p class="copy">${CONFIG.replay.copy}</p>
+                  <div class="pill-row" style="margin-top:18px;">
+                    <span class="pill">${CONFIG.recipientName}</span>
+                    <span class="pill">${appState.finalShortLine}</span>
+                  </div>
+                </div>
+                <div class="action-stack">
+                  <button class="btn" data-action="restart">${CONFIG.replay.replay}</button>
+                  <button class="btn-soft" data-action="another-world">${CONFIG.replay.anotherWorld}</button>
+                  <button class="btn-soft" data-action="go-secret">${CONFIG.replay.secret}</button>
+                  <button class="btn-soft" data-action="regenerate">${CONFIG.replay.regenerate}</button>
+                  <button class="btn-ghost" data-action="copy-short">${CONFIG.replay.copyShort}</button>
+                </div>
+              </div>
+            </section>
+          `;
         }
       }
+    };
 
-      try {
-        await navigator.clipboard.writeText(text);
-        showToast(COPY.result.shareFallback);
-      } catch (error) {
-        showToast(COPY.result.manualCopyFallback);
+    const ReconstructionEngine = {
+      async start() {
+        const atmosphere =
+          CONFIG.lab.atmospheres.find((item) => item.id === appState.calmAtmosphere)?.title ||
+          CONFIG.lab.atmospheres[0].title;
+        const picks = appState.lightThings.length ? appState.lightThings : CONFIG.lab.lighterPool.slice(0, 3).map((item) => item.title);
+        const room =
+          CONFIG.rooms.rooms.find((item) => item.id === appState.roomId)?.label ||
+          CONFIG.rooms.rooms[0].label;
+        const stepLines = CONFIG.reconstruct.steps.map((step) =>
+          Utils.format(step, {
+            atmosphere,
+            room,
+            lighterA: picks[0] || "",
+            lighterB: picks[1] || "",
+            lighterC: picks[2] || ""
+          })
+        );
+
+        appState.reconstructionRunning = true;
+        appState.reconstructionDone = false;
+        appState.reconstructionPercent = 0;
+        appState.reconstructionLogs = [];
+        SceneRenderer.render();
+
+        for (let index = 0; index < stepLines.length; index += 1) {
+          await Utils.wait(760);
+          appState.reconstructionPercent = Math.round(((index + 1) / stepLines.length) * 100);
+          appState.reconstructionLogs = [...appState.reconstructionLogs, stepLines[index]];
+          SceneRenderer.render();
+        }
+
+        appState.reconstructionRunning = false;
+        appState.reconstructionDone = true;
+        SceneRenderer.render();
       }
-    }
+    };
 
-    function showToast(message) {
-      elements.toast.textContent = message;
-      elements.toast.classList.add("show");
-      clearTimeout(showToast.timer);
-      showToast.timer = setTimeout(() => {
-        elements.toast.classList.remove("show");
-      }, 2400);
-    }
+    dom.viewFrame.addEventListener("click", (event) => {
+      const target = event.target.closest("[data-action]");
+      if (!target) return;
 
-    function resetExperience() {
-      clearProcessingTimers();
-      state.selections = {
-        moodFix: null,
-        place: null,
-        comfort: null
-      };
-      document.querySelectorAll(".option-btn").forEach((button) => {
-        button.classList.remove("selected");
-        button.setAttribute("aria-pressed", "false");
+      const { action, target: screenTarget, value, group } = target.dataset;
+
+      switch (action) {
+        case "go":
+          ScreenManager.go(screenTarget);
+          break;
+        case "identity":
+          InteractionModules.identity.choose(group, value);
+          break;
+        case "future-next":
+          FutureMessageSystem.next();
+          break;
+        case "atmosphere":
+          InteractionModules.lab.chooseAtmosphere(value);
+          break;
+        case "lighter":
+          InteractionModules.lab.toggleThing(value);
+          break;
+        case "star":
+          InteractionModules.sea.openStar(value);
+          break;
+        case "shell":
+          InteractionModules.sea.openShell(value);
+          break;
+        case "reflection":
+          InteractionModules.sea.touchReflection();
+          break;
+        case "moon":
+          InteractionModules.sea.touchMoon();
+          break;
+        case "horizon":
+          InteractionModules.sea.touchHorizon();
+          break;
+        case "room":
+          InteractionModules.rooms.select(value);
+          break;
+        case "room-detail":
+          InteractionModules.rooms.openDetail(value);
+          break;
+        case "humor-roll":
+          HumorCommentSystem.roll();
+          break;
+        case "copy-short":
+          InteractionModules.replay.copyShortLine();
+          break;
+        case "restart":
+          ScreenManager.reset();
+          break;
+        case "another-world":
+          InteractionModules.rooms.randomize();
+          ScreenManager.go("rooms");
+          break;
+        case "go-secret":
+          if (HiddenEndingTrigger.check()) {
+            ScreenManager.go("secret");
+          } else {
+            Utils.showToast(CONFIG.ui.secretLocked);
+          }
+          break;
+        case "regenerate":
+          FinalMessageGenerator.generate();
+          SceneRenderer.render();
+          break;
+        case "toast-secret":
+          Utils.showToast(CONFIG.ui.secretHint);
+          break;
+        default:
+          break;
+      }
+    });
+
+    dom.viewFrame.addEventListener("pointerdown", (event) => {
+      const target = event.target.closest("[data-action='hold-stability']");
+      if (!target) return;
+      InteractionModules.lab.startStabilityHold();
+    });
+
+    ["pointerup", "pointercancel", "pointerleave"].forEach((eventName) => {
+      dom.viewFrame.addEventListener(eventName, () => {
+        InteractionModules.lab.stopStabilityHold();
       });
-      resetProcessingVisual();
-      updateProcessButton();
-      showScreen("introScreen");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    });
 
-    function triggerSparkles() {
-      const total = 30;
-      const rect = elements.resultCard.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height * 0.28;
+    ["pointerup", "pointercancel"].forEach((eventName) => {
+      window.addEventListener(eventName, () => {
+        InteractionModules.lab.stopStabilityHold();
+      });
+    });
 
-      elements.sparkleLayer.innerHTML = "";
-
-      for (let index = 0; index < total; index += 1) {
-        const sparkle = document.createElement("span");
-        sparkle.className = "sparkle";
-        sparkle.style.left = `${centerX}px`;
-        sparkle.style.top = `${centerY}px`;
-        sparkle.style.setProperty("--dx", `${(Math.random() - 0.5) * 220}px`);
-        sparkle.style.setProperty("--dy", `${-40 - Math.random() * 170}px`);
-        sparkle.style.animationDelay = `${index * 28}ms`;
-        elements.sparkleLayer.appendChild(sparkle);
-      }
-
-      setTimeout(() => {
-        elements.sparkleLayer.innerHTML = "";
-      }, 1900);
-    }
-
-    function createParticles() {
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const particleCount = reducedMotion ? 8 : 16;
-      const fragment = document.createDocumentFragment();
-
-      for (let index = 0; index < particleCount; index += 1) {
-        const particle = document.createElement("span");
-        const size = 2 + Math.random() * 4;
-        particle.className = "particle";
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.bottom = `${-10 - Math.random() * 80}px`;
-        particle.style.animationDuration = `${12 + Math.random() * 12}s`;
-        particle.style.animationDelay = `${Math.random() * 12}s`;
-        fragment.appendChild(particle);
-      }
-
-      elements.particleLayer.appendChild(fragment);
-    }
-
-    elements.startBtn.addEventListener("click", () => showScreen("choicesScreen"));
-    elements.backBtn.addEventListener("click", () => showScreen("introScreen"));
-    elements.processBtn.addEventListener("click", startProcessing);
-    elements.restartBtn.addEventListener("click", resetExperience);
-    elements.shareBtn.addEventListener("click", shareResult);
-
-    applyHeadCopy();
-    applyCopy();
-    renderQuestions();
-    bindQuestionEvents();
-    updateProcessButton();
-    resetProcessingVisual();
-    createParticles();
+    Utils.createParticles();
+    appState.humorLine = HumorCommentSystem.random();
+    appState.seaWhisper = CONFIG.sea.whisperIntro;
+    FinalMessageGenerator.generate();
+    SceneRenderer.render();
   </script>
 </body>
 </html>
